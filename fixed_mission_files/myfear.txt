@@ -1,0 +1,61 @@
+"mission"
+{
+	"Name"		"MyFear"
+	"Version"   "2"
+	"Author"	"L4d2.cc分享 Hedgehogself"
+	"Website"	"http://www.l4d2.cc/map/hezuo/2013/0815/1036.html"
+	"DisplayTitle"	"我的恐惧"
+	"Description"  	"My Fear"
+	
+	"poster"
+	{
+		"posterImage"		"loadingscreen_kj"
+	}
+ 
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "myfear_ocultofbase1"
+				"DisplayName" "Adentrandonos en la Base"
+				"Image" "maps/myfear_ocultofbase1"
+			}
+ 
+			"2"
+			{
+				"Map" "myfear_ocultofbase2"
+				"DisplayName" "Dentro de la Base"
+				"Image" "maps/myfear_ocultofbase1"
+			}
+			
+			"3"
+			{
+				"Map" "myfear_ocultofbase3"
+				"DisplayName" "Saliendo de la Base"
+				"Image" "maps/myfear_ocultofbase1"
+			}
+		}
+ 
+		"survival"
+		{
+			"1"
+			{
+				"Map" "myfear_ocultofbase1_survival"
+				"DisplayName" "Base del Desierto (Exterior)"
+				"Image" "maps/myfear_ocultofbase1"
+			}
+ 
+			"2"
+			{
+				"Map" "myfear_ocultofbase2_survival"
+				"DisplayName" "Base del Desierto (Interior)"
+				"Image" "maps/myfear_ocultofbase1"
+			}
+		}		
+	} 
+}
+
+ 
+  

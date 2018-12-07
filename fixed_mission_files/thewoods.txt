@@ -1,0 +1,43 @@
+"mission"
+{
+	"Name"		"thewoods"
+	"Version"   "2"
+	"Author"	"Pyschedelic Troubadour, Valve"
+	"Website"	"http://www.gamemaps.com/details/18307"
+	"DisplayTitle"	"The Woods"
+	"Description"  	"The survivors must fight zombies in the scary woods!"
+ 	"OuttroImage"	"vgui\outrotitle_thewoods"
+	"survivor_set"  "1"
+	
+	"poster"
+	{
+		"posterImage"		"loadingscreen_thewoods"
+	}
+ 
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "l4d_thewoods_01"
+				"DisplayName" "The Woods"
+				"Image" "maps/l4d_thewoods21"
+			}
+ 
+			"2"
+			{
+				"Map" "l4d_thewoods_02"
+				"DisplayName" "I've Got Woods!"
+				"Image" "maps/l4d_thewoods22"
+			}
+                        
+            "3"
+			{
+				"Map" "l4d_thewoods_03b"
+				"DisplayName" "Fucking Woods!"
+				"Image" "maps/l4d_thewoods23"
+			}		
+		}	
+	}
+}

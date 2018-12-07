@@ -1,0 +1,53 @@
+"mission"
+{
+	"Name"					"leftinprypiat"
+	"Version"				"1"
+	"Author"				"[BuLLeT] SacriPan!"
+	"Website"				""
+	"DisplayTitle"			"Left In Prypiat"
+	"Description"			"They said it was abandonned. Clearly, they were wrong..."
+
+	//	"meleeweapons"			"fireaxe;frying_pan;machete;crowbar"
+	//	"allow_cola"			"0"
+	//	"no_wpn_restore"		"1"	//	on player wipe, don't keep any weapons
+	//	"no_female_boomers"		"1"	//	Can't have female Boomers because there's no audio support
+	//	"no_cs_weapons"			"1"	//	no Germany / CS weapons, preserve the weapons in the gun shop
+	"survivor_set"			"2"	//	Which set of survivors should be used. 1=L4D1, 2=L4D2
+	
+	"OuttroImage"			"vgui/outrotitle"
+	
+	"poster"
+	{
+		"posterImage"				"loadingscreen"
+		"posterImage_widescreen"	"loadingscreenws"
+		"fullscreen"				"1"
+	}
+	
+	
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "leftinprypiatc1mf"
+				"DisplayName" "Left In Prypiat"
+				"Image" "maps/leftinprypiatc1mf"
+				//	"SpawnBossThreats"		"1"
+				"coop_boss_spawning"
+				{
+					//	"spawn_pos_min"		"0.30"
+					//	"spawn_pos_max"		"0.90"
+					"tank_chance"		"0.0"
+					"witch_chance"		"0.33"
+					//	"witch_and_tank"	"0.0"
+				}
+			}
+
+		}
+
+	}
+
+
+
+}

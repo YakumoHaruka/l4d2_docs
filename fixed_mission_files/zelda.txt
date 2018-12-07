@@ -1,0 +1,92 @@
+// Mission files describe the metadata needed by campaign-specific add-ons so they can be 
+// integrated into Left4Dead. The data in this file is used by the game UI, matchmaking and server.
+// Although you may provide multiple Campaigns in one add-on by putting more than one .TXT file 
+// in the missions folder, it's generally a good idea to stick to one per add-on.
+//
+// HOW TO DEBUG MISSION FILES:
+//	In the console set "developer 2"
+//	Then type "mission_reload"
+// This will make the game reload all the mission files and print out every chapter for every mode it
+// finds.  It's very useful to ensure that your mission file is being correctly read.
+ 
+"mission"
+{
+	"Name"		"Zelda"
+ 
+	"Version"       "4"
+	"Author"	"Zteer"
+	"Website"	"http://www.l4dmaps.com/profile.php?id=16877&user=ferretsshadow"
+ 
+	"DisplayTitle"	"ZELDA NO DENSATSU"
+	"Description"  	"AIFIX;STDFIX;MFFIX; Famicom version The Legend of ZELDA"
+ 
+
+ 	"OuttroImage"	"vgui\OutroTitle_Deadline"
+ 
+	"poster"
+	{
+		"posterImage"		"LoadingScreen_powerstation"
+ 
+		"posterTitle"		""
+		"posterTitle_y"		"360"
+ 
+		"posterTagline"		""
+		"posterTagline_y"	"372"
+ 
+		// Adjust these to align the survivor names on your poster.
+		// 0,0 is center of the poster.
+		// Adjusting x value moves the names horizontally.
+		// Adjusting y value moves the names vertically.
+		// Try to space them in a staggered arrangement so that long names do not overlap.
+		"bill_player_name_x"	"118"
+		"bill_player_name_y"	"-195"
+ 
+		"louis_player_name_x"	"-53"
+		"louis_player_name_y"	"-205"
+ 
+		"zoey_player_name_x"	"-124"
+		"zoey_player_name_y"	"-210"
+ 
+		"francis_player_name_x"	"31"
+		"francis_player_name_y"	"-200"
+	}
+ 
+	// The modes section lists each of your campaign maps and each mode
+	// they support.  Depending on how you set up your campaign maps,
+	// you can reuse the same bsp for different modes as is the case with 
+        // coop and versus in this example. This requires setting up entities
+        // that show up or operate differently for different modes.
+        //
+	// The following modes are supported: "coop", "versus", "survival"
+	//
+	// Number each map section starting with "1"
+	//
+	// "Map" is the name of the bsp of the starting map. (do not include
+        // an extension)
+	// "DisplayName" is the name to use for the chapter of the map.
+	// "Image" is the image used for the chapter in the lobby and
+	// settings.
+ 
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "l4d_zelda01"
+				"DisplayName" "1: ZELDA no Densetsu EAGLE"
+				"Image" "maps/l4d_powerstation01"
+			}
+ 
+			"2"
+			{
+				"Map" "l4d_zelda02"
+				"DisplayName" "2: ZELDA no Densetsu MOON"
+				"Image" "maps/l4d_powerstation02"
+			
+			}
+		}
+ 	
+	}
+ 
+}

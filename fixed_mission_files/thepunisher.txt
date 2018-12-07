@@ -1,0 +1,67 @@
+"mission"
+{
+	"Name" "ThePunisher"
+	"Version" "2"
+	"Author" "SistwoCC"
+	"Website" "??"
+	"OuttroImage" "vgui/OutroTitle_ThePunisher"
+	"DisplayTitle" "The Punisher"
+	"Description" "Can you Survive The Punishment...."
+
+	"poster"
+	{
+		"posterImage" "LoadingScreen_ThePunisher"
+		"posterImage_widescreen" 	"LoadingScreen_ThePunisher_widescreen"
+		"fullscreen"		"1"
+	}
+
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "1BM"
+				"DisplayName" "The Mine"
+				"Image" "maps/l4d2_ThePunisher"
+			}
+			"2"
+			{
+				"Map" "1BM-2"
+				"DisplayName" "The Secret Base"
+				"Image" "maps/l4d2_ThePunisher"
+			}
+			"3"
+			{
+				"Map" "1BM-3"
+				"DisplayName" "The Dark Forest"
+				"Image" "maps/l4d2_ThePunisher"
+			}
+			"4"
+			{
+				"Map" "1BM-4"
+				"DisplayName" "The Dark Swamp"
+				"Image" "maps/l4d2_ThePunisher"
+			}
+			"5"
+			{
+				"Map" "1BM-5"
+				"DisplayName" "Lands End"
+				"Image" "maps/l4d2_ThePunisher"
+			}
+			"6"
+			{
+				"Map" "1BM-6"
+				"DisplayName" "Whats That Smell"
+				"Image" "maps/l4d2_ThePunisher"
+			}
+			"7"
+			{
+				"Map" "1BM-7"
+				"DisplayName" "River OutPost"
+				"Image" "maps/l4d2_ThePunisher"
+			}
+		}
+	}
+}
+

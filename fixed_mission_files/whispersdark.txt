@@ -1,0 +1,57 @@
+"mission"
+{
+	"Name"		"whispersdark" 
+	"Version"   "1" 
+	"Author"	"Last_GIFT Community" 
+	"Website"	"http://www.gamemaps.com/details/16615" 
+	"DisplayTitle"	"Whispers In The Dark"
+    "Description" 	"That whisper, in the dark, is zombie death!"
+ 	"OuttroImage"	"vgui\outrotitle_dark"	
+	"survivor_set"  "1"
+ 
+	"poster"
+	{
+		"posterImage"		"loadingscreen_dark"
+	}
+ 
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "l4d_priston01"
+				"DisplayName" "Prison Break"
+				"Image" "maps/Thumbnail"
+			}
+
+			"2"
+			{
+				"Map" "l4d_trainroad02"
+				"DisplayName" "Train Track Road"
+				"Image" "maps/Thumbnail2"
+			}
+
+			"3"
+			{
+				"Map" "l4d_deadrun03"
+				"DisplayName" "Dead Run"
+				"Image" "maps/Thumbnail"
+			}
+
+			"4"		
+			{
+				"Map" "l4d_train04"
+				"DisplayName" "Zombie Killin Daze"
+				"Image" "maps/Thumbnail2"
+			}
+
+			"5"		
+			{
+				"Map" "l4d_spacend05"
+				"DisplayName" "The End Game: Escape!"
+				"Image" "maps/Thumbnail"
+			}
+		}
+	}
+}

@@ -1,0 +1,111 @@
+"mission"
+{
+	// Use a short name, since it is used as a tag on the servers for matching
+	// your campaign when looking for a dedicated server. Generally it should
+	// be something unique. Avoid spaces and special characters.
+	// Do not change the name when you create a revision!
+
+	"Name"		"Roflmahwafflz"
+ 
+	// The version number is used when finding campaigns on dedicated servers
+	// and in matchmaking. If you try to connect to someone in matchmaking
+	// who has a newer version, you will be directed to download the new
+	// version.  You must increment this to the next integer (whole numbers)
+	// every time you release an update. (I.E. 1, 2, 3, 4, etc.)
+
+	"Version"       "2"
+ 
+	// Author of the campaign (i.e., you).
+
+	"Author"	"Roflmahwafflz"
+ 
+	// This should be the home page for your campaign and it should provide a
+	// description, a link to download it, and installation instructions.
+
+	"Website"	"http://www.l4dmaps.com/details.php?file=18549"
+ 
+	// This name is used when referring to the campaign in the UI. 
+
+	"DisplayTitle"	"Halls Of Death"
+	"Description"  	"World's First L4D2 Deathrun"
+ 
+	// Vtf shown behind the end credits when your campaign completes.
+	// Note: This item needs to have "vgui\" at the front. It is assumed
+	// for the poster and the map thumbnails.
+
+ 	"OuttroImage"	"vgui/hodouttro"
+
+	// What melee weapons are allowed to spawn in the campaign.
+
+	"meleeweapons"	"tonfa;frying_pan;machete;electric_guitar;baseball_bat;knife;riot_shield;golf_club"
+ 
+	// Loading poster data:
+	//
+	// Note that "posterTitle" and "posterTagline" are often blank as
+	// the poster usually includes these in the poster image itself.
+	// If you do not provide a poster, a generic default will be used.
+
+	"poster"
+	{
+		"posterImage"		"LoadingScreen_HallsOfDeath"
+		"posterImage_widescreen"	"LoadingScreen_HallsOfDeath"
+		
+		"fullscreen"		"1"
+
+		"posterTitle"		""
+		"posterTitle_y"		"320"
+		
+		"posterTagline"		""
+		"posterTagline_y"	"380"
+
+		"l4d2_names"				"1"
+		
+		"gambler_player_name_x"		"9999"
+		"gambler_player_name_y"		"9999"
+		
+		"producer_player_name_x"	"9999"		
+		"producer_player_name_y"	"9999"	
+		
+		"coach_player_name_x"		"9999"	
+		"coach_player_name_y"		"9999"	
+		
+		"mechanic_player_name_x"	"9999"
+		"mechanic_player_name_y"	"9999"
+
+		"character_order"		"gambler;producer;coach;mechanic"
+ 
+	}
+ 
+	// Number each map section starting with "1".
+	//
+	// "Map" is the name of the bsp of the starting map. (No extension)
+	// "DisplayName" is the name to use for the chapter of the map.
+	// "Image" is the image used for the chapter in the lobby and settings.
+ 
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "HallsofDeath"
+				"DisplayName" "Halls Of Death"
+				"Image" "maps/HoDT"
+			}
+ 
+			
+		}
+ 
+		"versus"
+		{
+			"1"
+			{
+				"Map" "HallsofDeath"
+				"DisplayName" "Halls Of Death"
+				"Image" "maps/HoDT"
+			}
+ 
+		}	
+	}
+}
+

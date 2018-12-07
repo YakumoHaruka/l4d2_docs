@@ -1,0 +1,70 @@
+"mission"
+{
+	"Name"			"Collaboration2"
+	"Version"		"3"
+	"Author"		"Collaboration"
+	"Website"	"http://www.gamemaps.com/details/19317"	
+	"DisplayTitle"	"Collaboration 2"
+	"Description"  	"The zombietime Hall of Shame."
+	"OuttroImage"	"vgui\loadingscreen_collaboration"
+	
+	"meleeweapons"	"fireaxe;crowbar;cricket_bat;baseball_bat;knife;electric_guitar;machete;frying_pan;katana;tonfa"
+	
+	//"allow_cola"	"1"
+	//"allow_diesel"	"1"
+	//"no_wpn_restore"	"1"		// on player wipe, don't keep any weapons
+	//"no_female_boomers"	"1"		// Can't have female Boomers because there's no audio support
+	//"no_cs_weapons"	"1"		// no Germany / CS weapons, preserve the weapons in the gun shop
+
+	"survivor_set"		"1"
+
+	"poster"
+	{
+		"posterImage"				"loadingscreen_collaboration"
+	}
+
+	"modes"
+	{
+		"coop"
+		{
+
+			"1"
+			{
+				"Map" "l4d2_collabo01_ntakopo"
+				"DisplayName" "Ntakopo - by Ntakopo"
+				"Image" "maps/Collaboration"
+			}
+
+			"2"
+			{
+				"Map" "l4d2_collabo02_secureRoom"
+				"DisplayName" "Secure Room - by Sinmai"
+				"Image" "maps/Collaboration"
+			}
+
+
+			"3"
+			{
+				"Map" "l4d2_collabo03_arrow"
+				"DisplayName" "Arrow - by Arrow"
+				"Image" "maps/Collaboration"
+			}
+
+
+			"4"
+			{
+				"Map" "l4d2_collabo04_tower"
+				"DisplayName" "Tower - by Zteer"
+				"Image" "maps/Collaboration"
+			}
+
+			"5"
+			{
+				"Map" "l4d2_collabo05_graveyard"
+				"DisplayName" "Graveyard - by DioDio"
+				"Image" "maps/Collaboration"
+			}
+		}
+	}
+}
+

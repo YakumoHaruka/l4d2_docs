@@ -1,0 +1,108 @@
+"mission"
+{
+   "Name"      "SouthStreet3"
+
+   "Version"       "1"
+
+   "Author"   "Rustem Corp"
+
+   "DisplayTitle"   "SOUTH Street, 3"
+   "Description"     "Map for Left4DEad."
+
+   "OuttroImage"   "vgui\outro"
+
+   "poster"
+   {
+	   "posterImage"      "loadingscreen_SouthStreet3"
+	   "posterImage_widescreen"	"loadingscreen_SouthStreet3_widescreen"
+	   "fullscreen"		"1"
+
+	   "posterTitle"      ""
+	   "posterTitle_y"      "360"
+
+	   "posterTagline"      ""
+	   "posterTagline_y"   "372"
+
+	   "francis_player_name_x"   "-124"
+	   "francis_player_name_y"   "125"
+
+	   "zoey_player_name_x"   "110"
+	   "zoey_player_name_y"   "125"
+
+
+	   "bill_player_name_x"   "123"
+	   "bill_player_name_y"   "85"
+
+	   "louis_player_name_x"   "21"
+      "louis_player_name_y"   "120"
+   }
+
+   "modes"
+   {
+      "coop"
+      {
+		  "1"
+		  {
+			  "Map" "southstreet3_sunrise" 
+			  "DisplayName" "Sunrise" 
+			  "Image" "maps/sunrise" 
+		  }
+		  "2"
+		  {
+			  "Map" "southstreet3_night" 
+			  "DisplayName" "Night" 
+			  "Image" "maps/night" 
+		  }
+		  "3"
+		  {
+			  "Map" "southstreet3_day" 
+			  "DisplayName" "Day" 
+			  "Image" "maps/day" 
+		  }
+      }
+
+	  "versus"
+      {
+		  "1"
+		  {
+			  "Map" "southstreet3_sunrise" 
+			  "DisplayName" "Sunrise" 
+			  "Image" "maps/sunrise" 
+		  }
+		  "2"
+		  {
+			  "Map" "southstreet3_night" 
+			  "DisplayName" "Night" 
+			  "Image" "maps/night" 
+		  } 
+		  "3"
+		  {
+			  "Map" "southstreet3_day" 
+			  "DisplayName" "Day" 
+			  "Image" "maps/day" 
+		  }                       
+	  }
+            
+	  "survival"
+	  {
+		  "1"
+		  {
+			  "Map" "southstreet3_sunrise" 
+			  "DisplayName" "Sunrise" 
+			  "Image" "maps/sunrise" 
+		  }
+		  "2"
+		  {
+			  "Map" "southstreet3_night" 
+			  "DisplayName" "Night" 
+			  "Image" "maps/night" 
+		  }
+		  "3"
+		  {
+			  "Map" "southstreet3_day" 
+			  "DisplayName" "Day" 
+			  "Image" "maps/day" 
+		  }
+	  }
+   }
+}

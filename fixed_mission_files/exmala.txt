@@ -1,0 +1,127 @@
+// HOW TO DEBUG MISSION FILES:
+//	In the console set "developer 2"
+//	Then type "mission_reload"
+// This will make the game reload all the mission files and print out every chapter for every mode it
+// finds.  It's very useful to ensure that your mission file is being correctly read.
+ 
+"mission"
+{
+	"Name"		"exMala"
+	"Version"       "7"
+	"Author"	"Rhesusmonkeyboy w/ L4D MAPS"
+	"Website"	"http://www.l4dmaps.com/details.php?file=9582"
+ 
+	"DisplayTitle"	"Escape from Malabar v7"
+	"Description"  	"Are you Ready for the Country?"
+	//	"Image"		"maps\indiana_adventure" 
+	// Note: This item needs to have "vgui\" at the front.
+	// It is assumed
+	// for the poster and the map thumbnails.
+ 	"OuttroImage"	"vgui\outro_malabar"
+	"meleeweapons"	"frying_pan;fireaxe;crowbar;cricket_bat;katana;baseball_bat;riotshield;tonfa"
+ 
+	// Loading poster data
+	//
+	// Note that "posterTitle" and "posterTagline" are often blank as
+	// the poster usually includes these in the poster image itself.
+	// If you do not provide a poster, a generic default will be used.
+	"poster"
+	{
+		"posterImage"		"loadingScreen_malabar"
+			//Note L4D2 does not position player names over the poster.
+		
+		"fullscreen"		"0"
+		
+		"posterTitle"		""
+		"posterTitle_y"		"320"
+		
+		"posterTagline"		""
+		"posterTagline_y"	"380"
+		
+		"l4d2_names"				"1"
+		
+		"mechanic_player_name_x"	"154"
+		"mechanic_player_name_y"	"980"
+
+		"coach_player_name_x"		"184"	
+		"coach_player_name_y"		"970"	
+
+		"producer_player_name_x"	"658"		
+		"producer_player_name_y"	"978"	
+
+		"gambler_player_name_x"		"878"
+		"gambler_player_name_y"		"986"
+
+		"character_order"	"mechanic;coach;producer;gambler" 
+	}
+ 
+	// The modes section lists each of your campaign maps and each mode
+	// they support.  Depending on how you set up your campaign maps,
+	// you can reuse the same bsp for different modes as is the case with 
+	// coop and versus in this example. This requires setting up entities
+	// that show up or operate differently for different modes.
+	//
+	// The following modes are supported: "coop", "versus", "survival"
+	//
+	// Number each map section starting with "1"
+	//
+	// "Map" is the name of the bsp of the starting map. (do not include
+	// an extension)
+	// "DisplayName" is the name to use for the chapter of the map.
+	// "Image" is the image used for the chapter in the lobby and
+	// settings.
+ 
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "exmala1_1"
+				"DisplayName" "Firehouse Flight"
+				"Image" "maps\exMala1_1"
+			}
+ 
+			"2"
+			{
+				"Map" "exmala1_2"
+				"DisplayName" "Townhall Terror"
+				"Image" "maps\exMala1_2"
+			}
+
+			"3"
+			{
+				"Map" "exmala1_3"
+				"DisplayName" "US 1 Uprising"
+				"Image" "maps\exMala1_3"
+			}
+		}
+ 
+		"versus"
+		{
+			"1"
+			{
+				"Map" "exmala1_1"
+				"DisplayName" "Firehouse Flight"
+				"Image" "maps\exMala1_1"
+			}
+ 
+			"2"
+			{
+				"Map" "exmala1_2"
+				"DisplayName" "Townhall Terror"
+				"Image" "maps\exMala1_2"
+			}
+			
+			"3"
+			{
+				"Map" "exmala1_3"
+				"DisplayName" "US 1 Uprising"
+				"Image" "maps\exMala1_3"
+			}
+		}	
+ 
+	}
+ 
+}
+
