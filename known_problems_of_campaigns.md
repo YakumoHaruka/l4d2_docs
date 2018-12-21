@@ -53,10 +53,11 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 合作 2  
 *collaboration 2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/19317)] *Updated: 09/21/17*  
- `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
+ `Stringtable Dictionary Missing`  /  `Malformed Mission File`  /  `Wrong Map Name`
   
 - Due to a space character in the name of this mission, you can't start the map in the game. The space character in mission file name also cause some trouble to the ACS/LMM plugin.   
 - The mission file contains invalid Image/OuttroImage/Poster settings. All the map's images are pointed to a non-existing file. Also, I suppose this campaign is designed to play with L4D1 survivor set because they are in the poster image. But the mission file is not specifying that, so by default there's the L4D2 survivor set in the game. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/collaboration2.txt) is my fixed version of the mission file, which has the space character in the file name removed.  
+- The map files in mission file and in the VPK are named in the form of `l4d2_collabo0X_XXXXX.XXX`, yet the names inside the bsp files are named in the form of `l4d_collabo0X_XXXXX.XXX`. Whenever players get to the safe room in any map of this campaign, the next map will failed to load. To solve this, you have to rename the `.bsp` and `.nav` files in the VPK, and modify the mission file accordingly.
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---  

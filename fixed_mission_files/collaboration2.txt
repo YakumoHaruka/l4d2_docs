@@ -30,14 +30,14 @@
 
 			"1"
 			{
-				"Map" "l4d2_collabo01_ntakopo"
+				"Map" "l4d_collabo01_ntakopo"
 				"DisplayName" "Ntakopo - by Ntakopo"
 				"Image" "maps/Collaboration"
 			}
 
 			"2"
 			{
-				"Map" "l4d2_collabo02_secureRoom"
+				"Map" "l4d_collabo02_secureroom"
 				"DisplayName" "Secure Room - by Sinmai"
 				"Image" "maps/Collaboration"
 			}
@@ -45,7 +45,7 @@
 
 			"3"
 			{
-				"Map" "l4d2_collabo03_arrow"
+				"Map" "l4d_collabo03_arrow"
 				"DisplayName" "Arrow - by Arrow"
 				"Image" "maps/Collaboration"
 			}
@@ -53,14 +53,14 @@
 
 			"4"
 			{
-				"Map" "l4d2_collabo04_tower"
+				"Map" "l4d_collabo04_tower"
 				"DisplayName" "Tower - by Zteer"
 				"Image" "maps/Collaboration"
 			}
 
 			"5"
 			{
-				"Map" "l4d2_collabo05_graveyard"
+				"Map" "l4d_collabo05_graveyard"
 				"DisplayName" "Graveyard - by DioDio"
 				"Image" "maps/Collaboration"
 			}
