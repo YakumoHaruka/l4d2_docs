@@ -1,0 +1,107 @@
+"mission"
+{
+	"Name"			"roadtof18"
+	"Version"		"2"
+	"Author"		"Tr1cK"
+	"Website"		"https://www.gamemaps.com/details/20891"
+	"DisplayTitle"		"Road To F18"
+	"Description"		"There's no safer place than sweden.. they said"
+	"Image"			"maps/image"
+	"OuttroImage"		"vgui\outrotitle_gd2"
+	"x360ctx"		"3"
+	"meleeweapons"		"electric_guitar;frying_pan;fireaxe;crowbar;cricket_bat;katana;baseball_bat;golfclub;knife"
+	"allow_cola"		"1"
+	"no_wpn_restore"	"1"	
+	"no_female_boomers"	"0"
+	"no_cs_weapons"		"0"	
+	"survivor_set"		"1"		// Which set of survivors should be used. 1=L4D1, 2=L4D2
+
+	"poster"
+	{
+		"posterimage_widescreen"	"loadingscreen_gdw"
+		"posterimage"			"loadingscreen_gdw"
+		"fullscreen"			"1"
+		"character_order"		"biker;teengirl;namvet;manager;"
+	}
+
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "l4d_gd_garage"
+				"DisplayName" "1: Garage"
+				"Image" "maps/gd1"
+			}
+
+			"2"
+			{
+				"Map" "l4d_gd_hill"
+				"DisplayName" "2: Hill/Subway"
+				"Image" "maps/gd2"
+			}
+			
+			"3"
+			{
+				"Map" "l4d_gd_forest"
+				"DisplayName" "3: Mines/Forest"
+				"Image" "maps/gd3"
+			}
+
+			"4"
+			{
+				"Map" "l4d_gd_richstone"
+				"DisplayName" "4: Shooting Range"
+				"Image" "maps/gd4"
+			}
+
+			"5"
+			{
+				"Map" "l4d_gd_aerodrome"
+				"DisplayName" "5: Aerodrome"
+				"Image" "maps/gd5"
+			}
+
+		}
+
+		"versus"
+		{
+			"1"
+			{
+				"Map" "l4d_gd_garage"
+				"DisplayName" "1: Garage (VS)"
+				"Image" "maps/gd1"
+			}
+
+			"2"
+			{
+				"Map" "l4d_gd_hill"
+				"DisplayName" "2: Hill/Subway (VS)"
+				"Image" "maps/gd2"
+			}
+			
+			"3"
+			{
+				"Map" "l4d_gd_forest"
+				"DisplayName" "3: Mines/Forest (VS)"
+				"Image" "maps/gd3"
+			}
+
+			"4"
+			{
+				"Map" "l4d_gd_richstone"
+				"DisplayName" "4: Shooting Range (VS)"
+				"Image" "maps/gd4"
+			}
+
+			"5"
+			{
+				"Map" "l4d_gd_aerodrome"
+				"DisplayName" "5: Aerodrome (VS)"
+				"Image" "maps/gd5"
+			}
+
+		}
+	}
+}

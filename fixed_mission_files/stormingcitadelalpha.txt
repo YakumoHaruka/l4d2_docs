@@ -1,0 +1,111 @@
+"mission"
+{
+	// This name identifies the campaign for the matchmaking system. 
+	// It is not visible in the game UI and can't contain spaces or special characters.
+	"Name"		"stormingcitadelalpha"
+ 
+	// This is also used by the matchmaking system for identification. It has to be an integer (1, 2, 3 etc.).
+	"Version"	"3"
+ 
+	// These values control how the campaign shows up in the campaign list and the in-game UI.
+	"DisplayTitle"	"Storming The Citadel"
+	"Description"	"STDFIX; The survivors go against a fortress full of horrors far more terrifying than the zombies they face on a daily basis. They must lay siege and break open the gate and bring justice to the evil overlord of the fortress."
+	"Author"	"Roflmahwafflz"
+ 
+	// This URL is shown for players trying to join a game running the campaign.
+	// It should point to a place where players can download it.
+	"Website"	"http://www.gamemaps.com/details/14876"
+ 
+	// Material VMT file shown behind the end credits when your campaign completes.
+        // Note: This item needs to have "vgui\" at the front. It is assumed
+	// for the poster and the map thumbnails.
+	"OuttroImage"	"vgui/outroTitle_DeadAir"
+ 
+	// A list of melee weapons that are allowed to spawn in the campaign. 
+	// The knife is only available for players with the German version.
+	"meleeweapons"	"electric_guitar;frying_pan;fireaxe;crowbar;cricket_bat;katana;baseball_bat;golfclub;knife"
+ 
+	// Set these options to "1" to enable the effects.
+	"allow_cola"		"0"	// Allows the Dead Center cola bottles to spawn.
+	"no_wpn_restore"	"0"	// On player wipe, don't keep any weapons.
+	"no_female_boomers"	"0"	// Disables spawning of the Boomette.
+	"no_cs_weapons"		"0"	// Disables spawning of the German version CS weapons.
+	"allow_diesel"		"0"	// Allows the Hard Rain Diesel cans to be used.
+ 
+	"survivor_set"		"2"	// Which set of survivors should be used. 1=L4D1, 2=L4D2
+ 
+	
+ 
+	// The modes section lists each of your campaign maps and each mode
+	// they support.  Depending on how you set up your campaign maps,
+	// you can reuse the same bsp for different modes as is the case with 
+        // coop and versus in this example. This requires setting up entities
+        // that show up or operate differently for different modes.
+        //
+	// Any game mode or mutation can be specified here. 
+	// Mutations will automatically inherit map entries if they are set for their base mode.
+	//
+	// Number each map section starting with "1"
+	//
+	// "Map" is the name of the bsp of the starting map. (do not include an extension or path)
+	// "DisplayName" is the name to use for the chapter of the map.
+	// "Image" is the image used for the chapter in the lobby and settings.
+	
+	// Loading poster data
+	"poster"
+	{
+		"posterImage"				"StormingPoster"
+		"posterImage_widescreen"	"StormingPoster"
+		"fullscreen"				"1"
+	}
+ 
+
+	"modes"
+	{
+		"coop"
+		{
+ 
+			"1"
+			{
+				"Map" "storm_citadel_n"
+				"DisplayName" "The Gateway"
+				"Image" "maps/NormalThumbnail1"
+			}
+
+			"2"
+			{
+				"Map" "lower_citadel_n"
+				"DisplayName" "The Siegeway"
+				"Image" "maps/NormalThumbnail2"
+			}
+
+			"3"
+			{
+				"Map" "lower_lower_citadel_n"
+				"DisplayName" "The Ratway"
+				"Image" "maps/NormalThumbnail3"
+			}
+
+			"4"
+			{
+				"Map" "storm_citadel_l"
+				"DisplayName" "The Gateway (Legendary)"
+				"Image" "maps/LegendaryThumbnail"
+			}
+			
+			"5"
+			{
+				"Map" "lower_citadel_l"
+				"DisplayName" "The Siegeway (Legendary)"
+				"Image" "maps/LegendaryThumbnail"
+			}
+
+			"6"
+			{
+				"Map" "lower_lower_citadel_n"
+				"DisplayName" "The Ratway (Legendary)"
+				"Image" "maps/LegendaryThumbnail"
+			}
+		}
+	}
+}

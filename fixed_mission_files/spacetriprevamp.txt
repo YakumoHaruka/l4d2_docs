@@ -1,0 +1,53 @@
+"mission"
+{
+	"Name"		"SpaceTripREVAMP"
+	"Version"  	"2"
+	"Author"	"Ported by Mr-Mr-Manning"
+	"Website"	""
+	"DisplayTitle"	"Space trip REVAMP"
+	"Description"  	"STDFIX; MFFIX; Originally made by Turtle cool2 ported by Mr-Mr-Manning"
+ 	"OuttroImage"	"vgui\Outro_spacetrip"
+	"survivor_set"  "1"
+	"poster"	
+	{
+		"posterImage"		"LoadingScreen_Spacetrip"
+		"character_order"		"biker;teenangst;namvet;manager"
+	}
+ 
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "l4d2_str_earth"
+				"DisplayName" "Earths worst hope"
+				"Image" "maps/l4d_st_earth_visu"
+			}
+			"2"
+			{
+				"Map" "l4d2_str_shuttle"
+				"DisplayName" "Shuttle Clean up"
+				"Image" "maps/l4d_st_shuttle_visu"
+			}
+			"3"
+			{
+				"Map" "l4d2_str_spacestation1"
+				"DisplayName" "SpaceStation part 1"
+				"Image" "maps/l4d_st_spacestation1_visu"
+			}
+			"4"
+			{
+				"Map" "l4d2_str_spacestation2"
+				"DisplayName" "SpaceStation part 2"
+				"Image" "maps/l4d_st_spacestation2_visu"
+			}
+			"5"
+			{
+				"Map" "l4d2_str_mars"
+				"DisplayName" "MARS!"
+				"Image" "maps/l4d_st_mars_visu"
+			}
+		} 
+	} 
+}

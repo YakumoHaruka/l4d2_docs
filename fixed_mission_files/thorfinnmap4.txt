@@ -1,0 +1,140 @@
+"mission"
+{
+	"Name"				"NapalmDeath"
+	"Version"			"1"
+	"Author"			"THORFINN"
+	"Website"			"http://www.l4dmaps.com/details.php?file=8264"
+	"BuiltIn"			"0"
+
+	"DisplayTitle"		"Napalm Death"
+	"Description"		"Bill has a major malfunction and flashes back to his days in Nam.  The VC he killed came back from the dead to haunt him."	
+
+	"Image"			""
+	"OuttroImage"		"vgui/outrotitle_napalmdeath"
+
+	"meleeweapons"		"machete;hunting_knife;fireaxe"
+	"allow_cola"		"1"
+	"no_wpn_restore"	"1"		// on player wipe, don't keep any weapons
+	"no_female_boomers"	"1"		// Can't have female Boomers because there's no audio support
+	"no_cs_weapons"		"0"		// no Germany / CS weapons, preserve the weapons in the gun shop
+
+	"survivor_set"		"1"		// Which set of survivors should be used. 1=L4D1, 2=L4D2
+
+	// Loading poster data
+	"poster"
+	{
+		"posterImage"			"LoadingScreenND"
+		"posterImage_widescreen"	"LoadingScreenND_Widescreen"
+
+		"fullscreen"		"1"		
+		
+		"bill_player_name_x"	"9999"
+		"bill_player_name_y"	"9999"
+		
+		"louis_player_name_x"	"9999"
+		"louis_player_name_y"	"9999"
+		
+		"zoey_player_name_x"	"9999"
+		"zoey_player_name_y"	"9999"
+		
+		"francis_player_name_x"	"9999"
+		"francis_player_name_y"	"9999"
+
+		"character_order"		"biker;namvet;manager;teengirl"
+	}
+	
+	
+
+
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "m1_village"
+				"DisplayName" "Village"
+				"Image" "maps/m1_village"
+				"x360ctx" "29"
+			}
+
+			"2"
+			{
+				"Map" "m2_jungle"
+				"DisplayName" "Jungle"
+				"Image" "maps/m2_jungle"
+				"x360ctx" "29"
+			}
+			
+			"3"
+			{
+				"Map" "m3_firebase"
+				"DisplayName" "Firebase"
+				"Image" "maps/m3_firebase"
+				"x360ctx" "29"
+			}	
+
+			"4"
+			{
+				"Map" "m4_ruins"
+				"DisplayName" "City"
+				"Image" "maps/m4_ruins"
+				"x360ctx" "29"
+			}
+
+		}
+
+		"versus"
+		{
+			"1"
+			{
+				"Map" "m1_village"
+				"DisplayName" "Village"
+				"Image" "maps/m1_village"
+				"TankVariant" "models/infected/hulk_dlc3.mdl"		
+			}
+
+			"2"
+			{
+				"Map" "m2_jungle"
+				"DisplayName" "Jungle"
+				"Image" "maps/m2_jungle"
+			}
+			
+			"3"
+			{
+				"Map" "m3_firebase"
+				"DisplayName" "Firebase"
+				"Image" "maps/m3_firebase"
+			}	
+
+			"4"
+			{
+				"Map" "m4_ruins"
+				"DisplayName" "City"
+				"Image" "maps/m4_ruins"
+			}
+
+		}
+	
+		"survival"
+		{			
+			
+			"1"
+			{
+				"Map" "m1_village"
+				"DisplayName" "Village"
+				"Image" "maps/m1village"
+				"TankVariant" "models/infected/hulk_dlc3.mdl"
+			}
+			
+			"2"
+			{
+				"Map" "m2_jungle"
+				"DisplayName" "Jungle"
+				"Image" "maps/m2_jungle"
+			}
+		}
+	} // "modes"
+} // "mission"
+

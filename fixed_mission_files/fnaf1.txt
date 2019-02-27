@@ -1,0 +1,72 @@
+"mission"
+{
+	"Name" 			"fnaf1"
+	"Version" 		"3"
+	"Author" 		"Deep Thunder"
+	"Website" 		"http://steamcommunity.com/sharedfiles/filedetails/?id=361216976"
+	"OuttroImage" 	"vgui/OutroTitle_FiveNightsAtFreddysPizzeria"
+	"DisplayTitle" 	"Freddy Fazbear's Pizzeria"
+	"Description" 	"Welcome to your new job at Freddy Fazbear's Pizzeria! Fazbear Entertainment is not responsible for death or dismemberment. Supports: Survival / Versus Survival and Campaign."
+
+
+	"poster"
+	{
+		"posterImage" 				"LoadingScreen_FiveNightsAtFreddysPizzeria"
+		"posterImage_widescreen" 	"LoadingScreen_FiveNightsAtFreddysPizzeria"
+		"fullscreen" 				"1"
+		"character_order" 			"producer;mechanic;gambler;coach"
+	}
+
+
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+				{
+					"Map" 		"fnaf1_n1"
+					"DisplayName" 	"Night 1"
+					"Image" 		"maps/fnaf1_n1_vgui"
+				}
+
+			"2"
+				{
+					"Map" 		"fnaf1_n2"
+					"DisplayName" 	"Night 2"
+					"Image" 		"maps/fnaf1_n2_vgui"
+				}
+
+			"3"
+				{
+					"Map" 		"fnaf1_n3"
+					"DisplayName" 	"Night 3"
+					"Image" 		"maps/fnaf1_n3_vgui"
+				}
+
+
+			"4"
+				{
+					"Map" 		"fnaf1_n4"
+					"DisplayName" 	"Night 4"
+					"Image" 		"maps/fnaf1_n4_vgui"
+				}
+
+			"5"
+				{
+					"Map" 		"fnaf1_n5"
+					"DisplayName" 	"Night 5"
+					"Image" 		"maps/fnaf1_n4_vgui"
+				}
+		}
+
+		"survival"
+		{
+			"1"
+				{
+					"Map" 		"fnaf1_survival_n6"
+					"DisplayName" 	"Night 6"
+					"Image" 		"maps/fnaf1_n6_vgui"
+				}
+		}
+	}
+}
