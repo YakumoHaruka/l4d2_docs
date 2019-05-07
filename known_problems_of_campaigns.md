@@ -424,6 +424,16 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
   
 ---
 
+### QiuMing City  
+`[chi]` 秋明市  
+*1655114147.vpk*  
+[[SteamWorkShop](https://steamcommunity.com/sharedfiles/filedetails/?id=1655114147)] *Updated: 03/24/19*  
+`Stringtable Dictionary Missing`  
+
+- Redistribution of the repaired VPK file to both the `server` and `client` side is required.   
+
+---
+
 ### Resident Evil: Outbreak  
 `[chi]` 生化危机：爆发  
 *Outbreak.vpk*  
@@ -538,7 +548,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 星际之门2  
 *stargate2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/6963)] *Updated: 01/31/17*  
-[[Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=854169313)] *Updated: 10/13/18*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=854169313)] *Updated: 10/13/18*  
  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
