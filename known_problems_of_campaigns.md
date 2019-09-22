@@ -6,6 +6,16 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 
 ---
 
+### Absolute Zero
+`[chi]` 绝对零度  
+*absolutezero.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/20972)] *Updated: 01/16/19*  
+ `ED_Alloc`  
+
+- The 1st map `l4d_zero01_south` has a fairly high `edict` count (around 1800 when there are 1 human and 3 survivor bots) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/l4d_zero01_south.cfg), managed to reduce the entity number in the map to around 1500.  
+  
+---
+
 ### Alien Trilogy: Section 1
 `[chi]` 异形三部曲：第一章  
 *alientrilogy_section1_V1_1.vpk*  
@@ -168,6 +178,17 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 
 - Because of the low uniqueness map names of this campaign, this campaign would easily conflicts with some others. As far as I known, map 2 `streets` conflicts with `Burning Night` map 2. Currently I have no perfect solution to this problem. You may either not to host the conflicting campaigns at the same time, or try to reorder the addons in `left4dead2/addonlist.txt` manually.  
 
+---
+
+### Deathcraft II  
+`[chi]` 我的世界 II  
+*deathcraft2.1.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2473)] *Updated: 11/05/12*  
+`Malformed Mission File`  
+
+- Mission file contains versus/survival map configurations that refer to non-existing maps. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/deathcraft.txt) is a fix.  
+- Only the `server` side needs to redeploy the repaired VPK file.  
+  
 ---
 
 ### Death Hour  
@@ -424,16 +445,6 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
   
 ---
 
-### QiuMing City  
-`[chi]` 秋明市  
-*1655114147.vpk*  
-[[SteamWorkShop](https://steamcommunity.com/sharedfiles/filedetails/?id=1655114147)] *Updated: 03/24/19*  
-`Stringtable Dictionary Missing`  
-
-- Redistribution of the repaired VPK file to both the `server` and `client` side is required.   
-
----
-
 ### Resident Evil: Outbreak  
 `[chi]` 生化危机：爆发  
 *Outbreak.vpk*  
@@ -583,6 +594,16 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
+  
+---
+
+### The Bloody Moors  
+`[chi]` 血腥荒野 / 血腥的摩尔人  
+*thebloodymoors.vpk*  
+[[GameMaps]((https://www.gamemaps.com/details/6772)] *Updated: 11/28/13*  
+ `Model Missing`  
+
+- There are models missing in map 3 and map 4 which cause random crashes on client side. A [fix](https://steamcommunity.com/sharedfiles/filedetails/?id=1341202052) is available in the Steam workshop.  
   
 ---
 
