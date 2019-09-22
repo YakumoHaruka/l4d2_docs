@@ -1339,7 +1339,7 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 
 ------
 
-### D8041 Half Life 2 Levels 1~33 & 34~66
+### D8041 Half Life 2 Levels 1\~33 & 34\~66
 
 `[chi]` 求肝之路：只剩半条命了4  
 *5 VPKs in 2 Parts: *  
