@@ -245,7 +245,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
   
 ---
 
-### D8041 Half Life 2 Levels 1\~33 & 34\~66
+### Half Life 2 Levels 1\~33 & 34\~66
 `[chi]` 求肝之路：只剩半条命了4  
 *5 VPKs in 2 Parts: *  
 *1. hl2_maps_1to33.vpk*  
