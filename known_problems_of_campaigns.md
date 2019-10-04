@@ -12,7 +12,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[GameMaps](https://www.gamemaps.com/details/20972)] *Updated: 01/16/19*  
  `ED_Alloc`  
 
-- The 1st map `l4d_zero01_south` has a fairly high `edict` count (around 1800 when there are 1 human and 3 survivor bots) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/l4d_zero01_south.cfg), managed to reduce the entity number in the map to around 1500.  
+- The 1st map `l4d_zero01_south` has a fairly high `edict` count (around 1800 when there are 1 human and 3 survivor bots) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](stripper/maps/l4d_zero01_south.cfg), managed to reduce the entity number in the map to around 1500.  
   
 ---
 
@@ -22,7 +22,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[GameMaps](https://www.gamemaps.com/details/3075)] *Updated: 10/21/11*  
  `Malformed Mission File`  
 
-- The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/alientri.txt).   
+- The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/alientri.txt).   
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -33,7 +33,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[GameMaps](https://www.gamemaps.com/details/19892)] *Updated: 03/15/18*  
  `Malformed Mission File`  
 
-- Mission file contains empty versus/survival/scavenge map configurations. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/apathtoexit.txt) is a fix.  
+- Mission file contains empty versus/survival/scavenge map configurations. [Here](fixed_mission_files/apathtoexit.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -45,7 +45,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[3DMGame](https://dl.3dmgame.com/patch/102073.html)] *Updated: 04/06/17*  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file contains non-existing versus/survival map configurations. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/blackout_extended.txt) is a fix.  
+- Mission file contains non-existing versus/survival map configurations. [Here](fixed_mission_files/blackout_extended.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -68,7 +68,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[OrangesGame](http://www.orangesgame.com/map/20150826/43.html)] *Updated: 08/26/15*  
 `Survivor Spawn Position Issue` 
 
-- On first map, the survivor spawns on top of a very high building, and the ground is not flat. On a dedicated server, I found that sometimes the player would spawn under the ground, falls to the bottom and dies. I made a [Stripper:Source map configuration file](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/gasometer.cfg) to modify the `info_player_start` and `info_survivor_position` entities to higher posions. The result turns out fine.  
+- On first map, the survivor spawns on top of a very high building, and the ground is not flat. On a dedicated server, I found that sometimes the player would spawn under the ground, falls to the bottom and dies. I made a [Stripper:Source map configuration file](stripper/maps/gasometer.cfg) to modify the `info_player_start` and `info_survivor_position` entities to higher posions. The result turns out fine.  
 
 ---
 
@@ -78,7 +78,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[L4D2.cc](http://www.kk175.com/map/hezuo/2013/0323/527.html)] *Updated: 04/03/2013*  
  `Malformed Mission File`  
 
-- The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/kaplin.txt).  
+- The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/kaplin.txt).  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -100,7 +100,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  /  `Wrong Map Name`  
 
 - Due to a space character in the name of this mission, you can't start the map in the game. The space character in mission file name also cause some trouble to the ACS/LMM plugin.   
-- The mission file contains invalid Image/OuttroImage/Poster settings. All the map's images are pointed to a non-existing file. Also, I suppose this campaign is designed to play with L4D1 survivor set because they are in the poster image. But the mission file is not specifying that, so by default there's the L4D2 survivor set in the game. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/collaboration2.txt) is my fixed version of the mission file, which has the space character in the file name removed.  
+- The mission file contains invalid Image/OuttroImage/Poster settings. All the map's images are pointed to a non-existing file. Also, I suppose this campaign is designed to play with L4D1 survivor set because they are in the poster image. But the mission file is not specifying that, so by default there's the L4D2 survivor set in the game. [Here](fixed_mission_files/collaboration2.txt) is my fixed version of the mission file, which has the space character in the file name removed.  
 - The map files in mission file and in the VPK are named in the form of `l4d2_collabo0X_XXXXX.XXX`, yet the names inside the bsp files are named in the form of `l4d_collabo0X_XXXXX.XXX`. Whenever players get to the safe room in any map of this campaign, the next map will failed to load. To solve this, you have to rename the `.bsp` and `.nav` files in the VPK, and modify the mission file accordingly.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -112,7 +112,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[GameMaps](https://www.gamemaps.com/details/7574)] *Updated: 10/16/13*  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/convoy.txt) is a fix.  
+- Mission file has some unpaired brackets. [Here](fixed_mission_files/convoy.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -133,7 +133,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[GameMaps](https://www.gamemaps.com/details/20083)] *Updated: 05/04/18*  
  `Malformed Mission File`  
 
-- Mission file contains empty versus/survival/scavenge map configurations. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/daysrepeat.txt) is a fix.  
+- Mission file contains empty versus/survival/scavenge map configurations. [Here](fixed_mission_files/daysrepeat.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -165,7 +165,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[GameMaps](https://www.gamemaps.com/details/2416)] *Updated: 02/26/10*  
  `Stringtable Dictionary Missing`  /   `Malformed Mission File`  
 
-- Mission file contains inactive survival/scavenge map settings. A removed version can be found [here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/deadontimeii.txt).  
+- Mission file contains inactive survival/scavenge map settings. A removed version can be found [here](fixed_mission_files/deadontimeii.txt).  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -186,7 +186,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[GameMaps](https://www.gamemaps.com/details/2473)] *Updated: 11/05/12*  
 `Malformed Mission File`  
 
-- Mission file contains versus/survival map configurations that refer to non-existing maps. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/deathcraft.txt) is a fix.  
+- Mission file contains versus/survival map configurations that refer to non-existing maps. [Here](fixed_mission_files/deathcraft.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -207,7 +207,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[GameMaps](https://www.gamemaps.com/details/2513)] *Updated: 08/27/11*  
  `Malformed Mission File`  
 
-- The poster section of the mission file causes parse error due to a  line of description which should be commented. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/exmala.txt) is a simple fix.  
+- The poster section of the mission file causes parse error due to a  line of description which should be commented. [Here](fixed_mission_files/exmala.txt) is a simple fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -229,7 +229,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
  `Malformed Mission File`  
 
 - Unexpected newlines in mission description.  
-- The 5th map's image setting in mission file contains an invalid character `?`. As long as there's no such thing as the 5th map's image, I used the 4th map's image to fix this problem. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/fnaf1.txt) is my fix.  
+- The 5th map's image setting in mission file contains an invalid character `?`. As long as there's no such thing as the 5th map's image, I used the 4th map's image to fix this problem. [Here](fixed_mission_files/fnaf1.txt) is my fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
 
 ---
@@ -257,8 +257,8 @@ Part 1: [[GameMaps](https://www.gamemaps.com/details/21597)] *Updated: 09/14/19*
 Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*  
 `Memory Leak`   /  `Map Transition Affecting Key Item`  
 
-- Level 58: d3_c17_12_d has serious memory leak related to the 'Striders'. The memory usage contantly grows since the map is loaded, until all striders are dead or the server memory is exhausted. Before the author of the map fix it, I am using [this](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/d3_c17_12_d.cfg) Stripper:Source map configuration file to stop the Striders animation, which can prevent the memory leak from happen, but the Striders won't be functional(they won't shoot at the survivors then).
-- Level 56: d3_c17_10b_d requires a  grenade launcher to destroy the turret at the begining of the level. The map has provided 4 grenade launchers in the room next to the begining safe room. It works correctly if this map is opened directly, but fails if this map is loaded because of finishing the last map(d3_c17_10a_d). Before the author of the map fix it, I am using this [Stripper:Source map configuration file](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/d3_c17_10b_d.cfg) to move one of those grenade launcher out of the affected area to get around the problem.
+- Level 58: d3_c17_12_d has serious memory leak related to the 'Striders'. The memory usage contantly grows since the map is loaded, until all striders are dead or the server memory is exhausted. Before the author of the map fix it, I am using [this](stripper/maps/d3_c17_12_d.cfg) Stripper:Source map configuration file to stop the Striders animation, which can prevent the memory leak from happen, but the Striders won't be functional(they won't shoot at the survivors then).
+- Level 56: d3_c17_10b_d requires a  grenade launcher to destroy the turret at the begining of the level. The map has provided 4 grenade launchers in the room next to the begining safe room. It works correctly if this map is opened directly, but fails if this map is loaded because of finishing the last map(d3_c17_10a_d). Before the author of the map fix it, I am using this [Stripper:Source map configuration file](stripper/maps/d3_c17_10b_d.cfg) to move one of those grenade launcher out of the affected area to get around the problem.
 
 ---
 
@@ -268,7 +268,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/5559)] *Updated: 10/06/12*  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file contains empty survival/scavenge map configurations. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/hallsofdeath.txt) is a fix.  
+- Mission file contains empty survival/scavenge map configurations. [Here](fixed_mission_files/hallsofdeath.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -339,7 +339,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/15286)] *Updated: 08/21/15*  
 `Malformed Mission File`  
 
-- The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/labirinferno.txt).  
+- The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/labirinferno.txt).  
 - Only the `server` side needs to redeploy the repaired VPK file.  
 
 ---
@@ -350,7 +350,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/4142)] *Updated: 02/02/12*  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/lastheartbeat.txt) is a fix.  
+- Mission file has some unpaired brackets. [Here](fixed_mission_files/lastheartbeat.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -381,7 +381,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/7073)] *Updated: 06/16/13*  
  `Malformed Mission File`  
 
-- The 3,5,6,8,10 map sections in the mission file are missing the name strings before them. I don't know whether this is on purpose, in order to hide these maps? Also, there are some unpaired brackets. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/left4dust2.txt) is my fixed version.  
+- The 3,5,6,8,10 map sections in the mission file are missing the name strings before them. I don't know whether this is on purpose, in order to hide these maps? Also, there are some unpaired brackets. [Here](fixed_mission_files/left4dust2.txt) is my fixed version.  
 - Players reported that there are some other problems in game, I have not investigated yet.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -393,7 +393,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/16942)] *Updated: 08/21/16*  
  `Malformed Mission File`  
 
-- The name of `coop_boss_spawning` section in the mission file is commented, leaving the section dangled. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/leftinprypiat.txt) is a fix.  
+- The name of `coop_boss_spawning` section in the mission file is commented, leaving the section dangled. [Here](fixed_mission_files/leftinprypiat.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -426,7 +426,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [L4D2.cc](http://www.kk175.com/map/hezuo/2013/0815/1036.html) Update: 08/15/13  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/myfear.txt) is a fix.  
+- Mission file has some unpaired brackets. [Here](fixed_mission_files/myfear.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -437,7 +437,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/2601)] *Updated: 08/18/11*  
 `Malformed Mission File`  
 
-- Mission file has invalid survival/scavenge map configurations. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/thorfinnmap4.txt) is a fix.  
+- Mission file has invalid survival/scavenge map configurations. [Here](fixed_mission_files/thorfinnmap4.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
 
 ---
@@ -468,8 +468,8 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/2526)] *Updated: 10/12/16*  
 `ED_Alloc`  
 
-- The 2nd map `re_outbreak` has a very high `edict` count (about 2000 when there are 1 human and 3 survivor bots) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/re_outbreak.cfg), managed to reduce the entity number in the map to around 1500. Still need some live tests on our 16 survivors server.  
-- The 5th map `re_hellfire` also has a fairly high `edict` count (around 1600 when there are 1 human and 3 survivor bots) from the beginning. Here's a [Stripper:Source map configuration file](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/re_hellfire.cfg) managed to reduce the entity number in the map to around 1500. Still need some live tests on our 16 survivors server.  
+- The 2nd map `re_outbreak` has a very high `edict` count (about 2000 when there are 1 human and 3 survivor bots) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](stripper/maps/re_outbreak.cfg), managed to reduce the entity number in the map to around 1500. Still need some live tests on our 16 survivors server.  
+- The 5th map `re_hellfire` also has a fairly high `edict` count (around 1600 when there are 1 human and 3 survivor bots) from the beginning. Here's a [Stripper:Source map configuration file](stripper/maps/re_hellfire.cfg) managed to reduce the entity number in the map to around 1500. Still need some live tests on our 16 survivors server.  
 
 ---
 
@@ -479,7 +479,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/20891)] *Updated: 12/24/18*  
 `Melee Weapon Banned`  
 
-- Actually this isn't a real problem. The melee weapons are banned on purpose by the author. If you use a sourcemod plugin like the `l4d2_melee_in_the_saferoom`, a bunch of hunter claws will be spawned instead. If your server really needs melee weapons to work with, you can modify the mission file to enable them, like [this](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/roadtof18.txt). Only the server side needs to redeploy the modified VPK.  
+- Actually this isn't a real problem. The melee weapons are banned on purpose by the author. If you use a sourcemod plugin like the `l4d2_melee_in_the_saferoom`, a bunch of hunter claws will be spawned instead. If your server really needs melee weapons to work with, you can modify the mission file to enable them, like [this](fixed_mission_files/roadtof18.txt). Only the server side needs to redeploy the modified VPK.  
 
 ---
 
@@ -499,7 +499,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/2600)] *Updated: 07/22/13*  
  `Malformed Mission File`  
 
-- Mission file contains empty versus/survival/scavenge map configurations. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/shadowmosesisland.txt) is a fix.  
+- Mission file contains empty versus/survival/scavenge map configurations. [Here](fixed_mission_files/shadowmosesisland.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -510,7 +510,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/7592)] *Updated: 11/03/14*  
 `Malformed Mission File`  
 
-- The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/shool.txt).  
+- The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/shool.txt).  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -522,7 +522,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[L4D2.cc](http://www.kk175.com/map/hezuo/2013/0127/188.html)] *Updated: 05/08/14*  
 `Malformed Mission File`  
 
-- The coop section of the mission file is not closed, while there are invalid versus/survival/scavenge map configurations derived from the `Deadline2` example campaign. A simple fix [here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/skippingclass.txt). 
+- The coop section of the mission file is not closed, while there are invalid versus/survival/scavenge map configurations derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/skippingclass.txt). 
 - The mission file was named `data inside.txt` which contains a space character. This doesn't cause problem, but I renamed it to `skippingclass.txt` in the fix for better reading.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
 
@@ -534,7 +534,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/2389)] *Updated: 10/14/10*  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- The mission file contains a scavenge map section with an invalid name `"0"`.  A simple fix [here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/solemnblackout.txt).  
+- The mission file contains a scavenge map section with an invalid name `"0"`.  A simple fix [here](fixed_mission_files/solemnblackout.txt).  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -556,7 +556,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
  `Malformed Mission File`  
 
 - `OuttroImage` in the mission file missing the `vgui\` prefix.  
-- Survival mode sections in the mission file are missing the names of them, and a pair of outer brackets. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/southstreet-3.txt) is a simple fix for all these problems.  
+- Survival mode sections in the mission file are missing the names of them, and a pair of outer brackets. [Here](fixed_mission_files/southstreet-3.txt) is a simple fix for all these problems.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -567,7 +567,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/8219)] *Updated: 05/21/13*  
 `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/spacetriprevamp.txt) is a fix. 
+- Mission file has some unpaired brackets. [Here](fixed_mission_files/spacetriprevamp.txt) is a fix. 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
 
 ---
@@ -589,7 +589,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/14876)] *Updated: 10/11/15*  
 `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file has invalid versus/survival/scavenge/holdout map configurations. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/stormingcitadelalpha.txt) is a fix.  And, according to the author's comment,  only the first 2 maps are actually released as playable. 
+- Mission file has invalid versus/survival/scavenge/holdout map configurations. [Here](fixed_mission_files/stormingcitadelalpha.txt) is a fix.  And, according to the author's comment,  only the first 2 maps are actually released as playable. 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required. 
 
 ---
@@ -651,7 +651,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
  `Malformed Mission File`  
 
 - An needless mission file `mission_manifest_sample.txt` in the missions folder. It is not a valid mission file, `l4d2_mission_manager` plugin will complain for this every time you start the server.  
-- The mission file has an invalid outtro image setting, and some unpaired brackets. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/rpstation.txt) is a fix.  
+- The mission file has an invalid outtro image setting, and some unpaired brackets. [Here](fixed_mission_files/rpstation.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -662,7 +662,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/17170)] *Updated: 08/23/16*  
  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/thepunisher.txt) is a fix.  
+- Mission file has some unpaired brackets. [Here](fixed_mission_files/thepunisher.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -673,7 +673,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/18307)] *Updated: 04/09/17*  
  `Stringtable Dictionary Missing`  /  `Wrong Map Name`  
 
-- The mission file describes the map names as `l4d_thewoods02` `l4d_thewoods03` and so does the actual BSP and NAV files named. But the map names within the BSP files are written `l4d_thewoods_02` `l4d_thewoods_03`. Thus when players make their way to the safe room in first map, the loading screen comes and goes, but there's no actual map change happens. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/thewoods.txt) is a fix to this problem.  And you will need to rename the BSP and NAV files' name as well.  
+- The mission file describes the map names as `l4d_thewoods02` `l4d_thewoods03` and so does the actual BSP and NAV files named. But the map names within the BSP files are written `l4d_thewoods_02` `l4d_thewoods_03`. Thus when players make their way to the safe room in first map, the loading screen comes and goes, but there's no actual map change happens. [Here](fixed_mission_files/thewoods.txt) is a fix to this problem.  And you will need to rename the BSP and NAV files' name as well.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -684,7 +684,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/2652)] *Updated: 01/08/11*  
  `Stringtable Dictionary Missing`  /  `Mission Name Confliction`  
 
-- Mission name conflicts with the example campaign `DeadLine2`. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/trapsmap.txt) is a simple fix.  
+- Mission name conflicts with the example campaign `DeadLine2`. [Here](fixed_mission_files/trapsmap.txt) is a simple fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -715,7 +715,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/7853)] *Updated: 12/15/13*  
 `Malformed Mission File`  
 
-- Mission file has invalid survival map id, and the brackets are unpaired. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/warpcore.txt) is a fix.  
+- Mission file has invalid survival map id, and the brackets are unpaired. [Here](fixed_mission_files/warpcore.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file. 
 
 ---
@@ -726,7 +726,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/16615)] *Updated: 04/13/16*  
  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/whispersdark.txt) is a fix.  
+- Mission file has some unpaired brackets. [Here](fixed_mission_files/whispersdark.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -737,8 +737,8 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/5767)] *Updated: 07/16/12*  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  /  `Mission Name Confliction`  /  `info_landmark Error`  
 
-- Mission name conflicts with `Power Station`. The `addontitle` in `addoninfo.txt` and `Name` in  mission file needs to be modified. What's even worse is that the mission file name itself also the same as in `Power Station`. If your server plans on hosting both mission, you need to unpack, rename the mission file to something else like `zelda.txt`, fix the content of it and the `addoninfo.txt`, then pack it up again. A redistribution of the repaired VPK file to your client is inevitable. [Here](https://github.com/YakumoHaruka/l4d2_docs/blob/master/fixed_mission_files/zelda.txt) is a fix of the mission file, which has been renamed to `zelda.txt`.  
-- The position at the end of the first map links to the second map with an info_landmark entity. However, the info_landmark entity's position is almost 900 units from the ground. So if players successfully made their way to the safe room of the first map, most (if not all) of them will fall and dead at the beginning of the second map. This can be fix with a [Stripper:Source map configuration file](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/l4d_zelda02.cfg).  
+- Mission name conflicts with `Power Station`. The `addontitle` in `addoninfo.txt` and `Name` in  mission file needs to be modified. What's even worse is that the mission file name itself also the same as in `Power Station`. If your server plans on hosting both mission, you need to unpack, rename the mission file to something else like `zelda.txt`, fix the content of it and the `addoninfo.txt`, then pack it up again. A redistribution of the repaired VPK file to your client is inevitable. [Here](fixed_mission_files/zelda.txt) is a fix of the mission file, which has been renamed to `zelda.txt`.  
+- The position at the end of the first map links to the second map with an info_landmark entity. However, the info_landmark entity's position is almost 900 units from the ground. So if players successfully made their way to the safe room of the first map, most (if not all) of them will fall and dead at the beginning of the second map. This can be fix with a [Stripper:Source map configuration file](stripper/maps/l4d_zelda02.cfg).  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
 
 ---
