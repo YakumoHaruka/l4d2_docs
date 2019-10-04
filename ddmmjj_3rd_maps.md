@@ -126,6 +126,20 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 
 -----
 
+### D1028 The Hive   
+`[chi]` 生化危机：蜂巢   
+*the_hive.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/11555)] *Updated: 08/20/18*  
+**Known Issues**: `None`  
+**Maps**: 5  
+
+1. the_hive_m1  
+2. the_hive_m2  
+3. the_hive_m3  
+4. the_hive_m4  
+5. the_hive_m5  
+
+-----
 ## 第二波 / The 2nd wave
 ## 第三波 / The 3rd wave
 ## 第四波 / The 4th wave
@@ -1350,7 +1364,7 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 *5. hl2_patches_2.vpk*   
 Part 1: [[GameMaps](https://www.gamemaps.com/details/21597)] *Updated: 09/14/19*  
 Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*  
-**Known Issues**: `None`  
+**Known Issues**: `Memory Leak`   /  `Map Transition Affecting Key Item`  
 **Maps**: 66  
 
 1. d1_trainstation_01_d  
@@ -1419,5 +1433,22 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 64. d3_citadel_04_d  
 65. d3_citadel_05_d  
 66. d3_breen_01_d  
+
+------
+
+### D8042 Land Of Oblivion
+
+`[chi]` 遗忘之地  
+*landofoblivion.vpk*  /  *1655417853.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/21811)]  *Updated: 09/22/19*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1655417853)] *Updated: 09/09/19*  
+**Known Issues**: `None`  
+**Maps**: 5  
+
+1. threedays01  
+2. threedays02  
+3. threedays03  
+4. threedays04  
+5. threedays05  
 
 ------

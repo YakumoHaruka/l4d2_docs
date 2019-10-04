@@ -245,6 +245,23 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
   
 ---
 
+### D8041 Half Life 2 Levels 1\~33 & 34\~66
+`[chi]` 求肝之路：只剩半条命了4  
+*5 VPKs in 2 Parts: *  
+*1. hl2_maps_1to33.vpk*  
+*2. hl2_maps_34to66.vpk*   
+*3. hl2_sound.vpk*   
+*4. hl2_patches_1.vpk*   
+*5. hl2_patches_2.vpk*   
+Part 1: [[GameMaps](https://www.gamemaps.com/details/21597)] *Updated: 09/14/19*  
+Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*  
+`Memory Leak`   /  `Map Transition Affecting Key Item`  
+
+- Level 58: d3_c17_12_d has serious memory leak related to the 'Striders'. The memory usage contantly grows since the map is loaded, until all striders are dead or the server memory is exhausted. Before the author of the map fix it, I am using [this](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/d3_c17_12_d.cfg) Stripper:Source map configuration file to stop the Striders animation, which can prevent the memory leak from happen, but the Striders won't be functional(they won't shoot at the survivors then).
+- Level 56: d3_c17_10b_d requires a  grenade launcher to destroy the turret at the begining of the level. The map has provided 4 grenade launchers in the room next to the begining safe room. It works correctly if this map is opened directly, but fails if this map is loaded because of finishing the last map(d3_c17_10a_d). Before the author of the map fix it, I am using this [Stripper:Source map configuration file](https://github.com/YakumoHaruka/l4d2_docs/blob/master/stripper/maps/d3_c17_10b_d.cfg) to move one of those grenade launcher out of the affected area to get around the problem.
+
+---
+
 ### Halls Of Death  
 `[chi]` 死亡大厅  
 *hallsofdeathv2.vpk*  
