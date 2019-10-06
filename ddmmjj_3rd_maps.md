@@ -20,6 +20,21 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 
 -----
 
+### D0038 Dark Wood (Extended)   
+`[chi]`  黑暗森林（加长版）   
+*darkwood_extended.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/14120)] *Updated: 09/22/18*  
+**Known Issues**: `info_landmark Error`  
+**Maps**: 5  
+
+1. dw_woods  
+2. dw_underground  
+3. dw_complex  
+4. dw_otherworld  
+5. dw_final  
+
+-----
+
 ## 第一波 / The 1st wave
 ### D1001 White Forest   
 `[chi]` 白森林   
@@ -140,6 +155,23 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 5. the_hive_m5  
 
 -----
+
+### D1031 Death Mountain   
+`[chi]` 死亡山脉   
+*deathmountain.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/7672)] *Updated: 03/13/13*  
+**Known Issues**: `None`  
+**Maps**: 6  
+
+1. dthmnt_village  
+2. dthmnt_crater  
+3. dthmnt_templeforye  
+4. dthmnt_temple3rdfloor  
+5. dthmnt_temple4thfloor  
+6. dthmnt_templeboss  
+
+-----
+
 ## 第二波 / The 2nd wave
 ## 第三波 / The 3rd wave
 ## 第四波 / The 4th wave

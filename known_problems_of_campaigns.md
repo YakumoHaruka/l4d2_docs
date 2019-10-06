@@ -127,6 +127,16 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
   
 ---
 
+### Dark Wood (Extended)   
+`[chi]`  黑暗森林（加长版）   
+*darkwood_extended.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/14120)] *Updated: 09/22/18*  
+`info_landmark Error` 
+
+- The info_landmark on map 4 (dw_otherworld) is below the elevator, when players finished the last map (dw_complex), they will be spawned at info_landmark position, and fall to the bottom and dead. This can be fix with a [Stripper:Source map configuration file](stripper/maps/dw_otherworld.cfg).
+
+---
+
 ### Days Repeat  
 `[chi]` 重复的日子  
 *daysrepeat.vpk*  
