@@ -3,6 +3,23 @@
 [TOC]
 
 ## 第零波 / The 0th wave
+### D0015 Claustrophobia   
+`[chi]`  幽闭恐惧症   
+*claustrophobia.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/3987)] *Updated: 12/04/12*  
+**Known Issues**: `None`  
+**Maps**: 7  
+
+1. claustrophobia1  
+2. claustrophobia2  
+3. claustrophobia3  
+4. claustrophobia4  
+5. claustrophobia5  
+6. claustrophobia6  
+7. claustrophobia7  
+
+-----
+
 ### D0022 The Bloody Moors   
 `[chi]`  血腥荒野  /  `[chi]` 血腥的摩尔人   
 *thebloodymoors.vpk*  
@@ -694,10 +711,14 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 
 ### D7042 SOUTH Street, 3   
 `[chi]` D7042 南大街 3   
+*southstreet3.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/18196)] *Updated: 03/19/17*  
+**Known Issues**: `Malformed Mission File`  
+**Maps**: 3
 
-
-**Known Issues**: `None`  
-**Maps**:  
+1. southstreet3_sunrise  
+2. southstreet3_night  
+3. southstreet3_day  
 
 -----
 
@@ -1079,7 +1100,7 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 
 ------
 
-### D8022 Resident Evil: Outbreak  
+### D8022 Resident Evil Outbreak  
 
 `[chi]` 生化危机：爆发  
 *Outbreak.vpk*  
@@ -1255,7 +1276,7 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 `[chi]` 拉扎尔城堡的诅咒  /  `[chi]` 城堡诅咒  
 *thecurseoflazarcastle.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/21267)] *Updated: 05/30/19*  
-**Known Issues**: `Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  / `Checkpoint Missing` / `NavLadder Crash`  
 **Maps**: 5  
 
 1. castle_map_01  
@@ -1269,8 +1290,10 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 ### D8034 Home Town  
 
 `[chi]` 故乡  
-*q_hometown1_1.vpk*  
-[[GameMaps](https://www.gamemaps.com/details/21398)] *Updated: 06/24/19*  
+*2 VPKs:*  
+*1. q_hometown1_1.vpk*  
+*2. q_hometown1_2.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/21398)] *Updated: 09/18/19*  
 **Known Issues**: `None`  
 **Maps**: 4  
 

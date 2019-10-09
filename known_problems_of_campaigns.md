@@ -472,7 +472,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
   
 ---
 
-### Resident Evil: Outbreak  
+### Resident Evil Outbreak  
 `[chi]` 生化危机：爆发  
 *Outbreak.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2526)] *Updated: 10/12/16*  
@@ -642,6 +642,19 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
+---
+
+### The Curse of Lazar Castle  
+
+`[chi]` 拉扎尔城堡的诅咒  /  `[chi]` 城堡诅咒  
+*thecurseoflazarcastle.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/21267)] *Updated: 05/30/19*  
+`Malformed Mission File`  / `Checkpoint Missing` / `NavLadder Crash`  
+
+- The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/thecurseofcastlelazar.txt). Only the `server` side needs to redeploy the repaired VPK file.  
+- Checkpoint is missing at the beginning of the first map, which leads to no safe area for survivors while there is a rather long intro. Although the author build an air wall to block the infected from getting in before the intro finish, Spitter's spit can shoot through it and hurts the survivors. If this matters, you will need to edit the NAV of the first map, mark the areas with the PLAYER_START attribute and add CHECKPOINT attribute to them. Luckily this only need to redeploy on the `server` side.
+- The `NavLadder Crash` has been frequently reported in map 2 and map 4. Might related to some NAV problems but I still got no idea on what actually cause this problem and how to fix it.
+
 ---
 
 ### The Parish Original Beta Map  
