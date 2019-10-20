@@ -190,6 +190,23 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 -----
 
 ## 第二波 / The 2nd wave
+### D2033 Fatal Freight Fixed   
+`[chi]` 致命货运站   
+*cmpn_FatalFreightFix.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/19871)] *Updated: 03/10/18*  
+**Known Issues**: `None`  
+**Maps**: 5  
+
+1. l4d2_ff01_woods  
+2. l4d2_ff02_factory  
+3. l4d2_ff03_highway  
+4. l4d2_ff04_plant  
+5. l4d2_ff05_station  
+
+- This is a fixed version of the [original](https://www.gamemaps.com/details/14002) campaign. The 5th map in original campaign is missing the stringtable dictionary.
+
+-----
+
 ## 第三波 / The 3rd wave
 ## 第四波 / The 4th wave
 ## 第五波 / The 5th wave
@@ -1392,7 +1409,7 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 
 ------
 
-### D8040 Unholy Ground
+### D8040 Unholy Ground  
 
 `[chi]` 邪恶之地  
 *1501941299.vpk*  
@@ -1408,7 +1425,7 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 
 ------
 
-### D8041 Half Life 2 Levels 1\~33 & 34\~66
+### D8041 Half Life 2 Levels 1\~33 & 34\~66  
 
 `[chi]` 求肝之路：只剩半条命了4  
 *5 VPKs in 2 Parts: *  
@@ -1491,7 +1508,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 
 ------
 
-### D8042 Land Of Oblivion
+### D8042 Land Of Oblivion  
 
 `[chi]` 遗忘之地  
 *landofoblivion.vpk*  /  *1655417853.vpk*  
@@ -1507,3 +1524,68 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 5. threedays05  
 
 ------
+
+### D8043 Left 4 Toonrun  
+
+`[chi]` 卡通世界  
+*toonrun.vpk*  /  *756806075.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=756806075)] *Updated: 02/17/18*  
+[[GameMaps](https://www.gamemaps.com/details/21890)]  *Updated: 10/11/19*  
+**Known Issues**: `None`  
+**Maps**: 3  
+
+1. toonrun1  
+2. toonrun2  
+3. toonrun3  
+
+------
+
+### D8044 Shore Rescue  
+
+`[chi]` 海岸救援  
+*ShoreRescue.vpk*  /  *244326765.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=244326765)] *Updated: 04/26/14*  
+[[GameMaps](https://www.gamemaps.com/details/21887)]  *Updated: 10/10/19*  
+**Known Issues**: `Stringtable Dictionary Missing` / `PLAYER_START Without CHECKPOINT`  
+**Maps**: 4  
+
+1. l4d2_morgan_road  
+2. l4d2_apartments  
+3. l4d2_police_station  
+4. l4d2_river  
+
+------
+
+### D8045 Outline  
+
+`[chi]` 跨越边境  
+*Outline.vpk*  /  *1749424232.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1749424232)] *Updated: 05/26/19*  
+[[GameMaps](https://www.gamemaps.com/details/21882)]  *Updated: 10/09/19*  
+**Known Issues**: `Malformed Mission File`  
+**Maps**: 4  
+
+1. outline_m1  
+2. outline_m2  
+3. outline_m3  
+4. outline_m4  
+
+------
+
+### D8046 Fallout Twilight  
+
+`[chi]` 微尘暮光  
+*FalloutTwilight.vpk*  /  *346551866.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=346551866)] *Updated: 01/25/15*  
+[[GameMaps](https://www.gamemaps.com/details/21883)]  *Updated: 10/09/19*  
+**Known Issues**: `Stringtable Dictionary Missing`  /  `Survior Spawns In Wall`  /  `Restart Round Intro Stuck`  /  `PLAYER_START Without CHECKPOINT`
+**Maps**: 4  
+
+1. urbanhoods_m1_streets  
+2. urbanhoods_m2_sewer  
+3. urbanhoods_m3_forest  
+4. urbanhoods_m4_skyscraper  
+
+------
+
+  

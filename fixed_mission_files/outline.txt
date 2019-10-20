@@ -1,0 +1,125 @@
+"mission"
+{
+	"Name"		"Outline"
+	"Version"       "1"
+	"Author"	"TaigaAisaka"
+	"DisplayTitle"	"Outline"
+        "Description"  	"Out of the dead line!"
+        "Image"			"maps/outline_m1"
+ 	"OuttroImage"	"vgui\OutroTitle_outline"
+	"poster"
+	{
+		"posterImage"		"LoadingScreen_outline"
+ 
+		"l4d2_names"				"1"
+		
+		"gambler_player_name_x"		"9999"
+		"gambler_player_name_y"		"9999"
+		
+		"producer_player_name_x"	"9999"		
+		"producer_player_name_y"	"9999"	
+		
+		"coach_player_name_x"		"9999"	
+		"coach_player_name_y"		"9999"	
+		
+		"mechanic_player_name_x"	"9999"
+		"mechanic_player_name_y"	"9999"
+		"character_order"		"producer;gambler;coach;mechanic"
+        }
+
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"map" "outline_m1"
+				"DisplayName" "Rise up"
+				"Image" "maps\outline_m1"
+			}
+			"2"
+			{
+				"map" "outline_m2"
+				"DisplayName" "Visit the city"
+				"Image" "maps\outline_m2"
+			}
+			"3"
+			{
+				"map" "outline_m3"
+				"DisplayName" "Through the town"
+				"Image" "maps\outline_m3"
+			}
+                        "4"
+			{
+				"map" "outline_m4"
+				"DisplayName" "Rest in yard"
+				"Image" "maps\outline_m4"
+			}
+		}
+
+
+		"versus"
+		{
+			"1"
+			{
+				"map" "outline_m1"
+				"DisplayName" "Rise up"
+				"Image" "maps\outline_m1"
+				"VersusCompletionScore"	"300"	
+				"versus_boss_spawning"
+				{
+					"spawn_pos_min"	 "0.10"
+					"spawn_pos_max"  "0.80"
+					"tank_chance"	 "1.00"
+					"witch_chance"	 "1.00"
+                                        "witch_and_tank" "1.00"
+				}				
+			}
+			"2"
+			{
+				"map" "outline_m2"
+				"DisplayName" "Visit the city"
+				"Image" "maps\outline_m2"
+				"VersusCompletionScore"	"500"
+				"versus_boss_spawning"
+				{
+					"spawn_pos_min"	 "0.15"
+					"spawn_pos_max"	 "0.85"
+					"tank_chance"	 "1.00"
+					"witch_chance"	 "1.00"
+					"witch_and_tank" "1.00"
+				}
+			}
+			"3"
+			{
+				"map" "outline_m3"
+				"DisplayName" "Through the town"
+				"Image" "maps\outline_m3"
+				"VersusCompletionScore"	"500"
+				"versus_boss_spawning"
+				{
+					"spawn_pos_min"	 "0.10"
+					"spawn_pos_max"	 "0.85"
+					"tank_chance"	 "1.00"
+					"witch_chance"	 "1.00"
+					"witch_and_tank" "1.00"
+				}
+                        }
+                        "4"
+			{
+				"map" "outline_m4"
+				"DisplayName" "Rest in yard"
+				"Image" "maps\outline_m4"
+                                "VersusCompletionScore"	"800"
+				"versus_boss_spawning"
+				{
+					"spawn_pos_min"	 "0.10"
+					"spawn_pos_max"	 "0.85"
+					"tank_chance"	 "1.00"
+					"witch_chance"	 "1.00"
+					"witch_and_tank" "1.00"
+				}
+			}		
+		}
+	}
+}

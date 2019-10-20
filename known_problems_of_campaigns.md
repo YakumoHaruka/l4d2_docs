@@ -112,7 +112,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 [[GameMaps](https://www.gamemaps.com/details/7574)] *Updated: 10/16/13*  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](fixed_mission_files/convoy.txt) is a fix.  
+- Mission file has some unpaired braces. [Here](fixed_mission_files/convoy.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -221,6 +221,20 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
+
+### Fallout Twilight  
+`[chi]` 微尘暮光  
+*FalloutTwilight.vpk*  /  *346551866.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=346551866)] *Updated: 01/25/15*  
+[[GameMaps](https://www.gamemaps.com/details/21883)]  *Updated: 10/09/19*  
+**Known Issues**: `Stringtable Dictionary Missing`  /  `Survior Spawns In Wall`  /  `Restart Round Intro Stuck`  /  `PLAYER_START Without CHECKPOINT`
+
+- Stringtable dictionary of map 4 and all versus maps are missing. Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
+- The `info_player_start` and `info_survivor_position` origins are set in the floor of the initial checkpoint room of map 1. Sometimes survivors will be spawned under the room and there is no where to go. This can be fixed via a [Stripper:Source map configuration file](stripper/maps/urbanhoods_m1_streets.cfg) on the server side.  
+- The intro of map 1 will stop running after round restart, making the game unplayable. That is because of a `logic_auto` entity in the map which stops the `func_tracktrain` entity used by the intro. Removing that behavior via a [Stripper:Source map configuration file](stripper/maps/urbanhoods_m1_streets.cfg) on the server side solves the problem.  
+- NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
+
+--- 
 
 ### Forgotten Mist  
 `[chi]` 被遗忘的迷雾  
@@ -360,7 +374,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/4142)] *Updated: 02/02/12*  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](fixed_mission_files/lastheartbeat.txt) is a fix.  
+- Mission file has some unpaired braces. [Here](fixed_mission_files/lastheartbeat.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -391,7 +405,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/7073)] *Updated: 06/16/13*  
  `Malformed Mission File`  
 
-- The 3,5,6,8,10 map sections in the mission file are missing the name strings before them. I don't know whether this is on purpose, in order to hide these maps? Also, there are some unpaired brackets. [Here](fixed_mission_files/left4dust2.txt) is my fixed version.  
+- The 3,5,6,8,10 map sections in the mission file are missing the name strings before them. I don't know whether this is on purpose, in order to hide these maps? Also, there are some unpaired braces. [Here](fixed_mission_files/left4dust2.txt) is my fixed version.  
 - Players reported that there are some other problems in game, I have not investigated yet.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -436,7 +450,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [L4D2.cc](http://www.kk175.com/map/hezuo/2013/0815/1036.html) Update: 08/15/13  
  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](fixed_mission_files/myfear.txt) is a fix.  
+- Mission file has some unpaired braces. [Here](fixed_mission_files/myfear.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
 ---
@@ -460,6 +474,17 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 
 - There's no known solution to this problem for me currently.   
   
+---
+
+### Outline  
+`[chi]` 跨越边境  
+*Outline.vpk*  /  *1749424232.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1749424232)] *Updated: 05/26/19*  
+[[GameMaps](https://www.gamemaps.com/details/21882)]  *Updated: 10/09/19*  
+**Known Issues**: `Malformed Mission File`  
+
+- Mission file has some unpaired braces. [Here](fixed_mission_files/outline.txt) is a fix.  
+
 ---
 
 ### Power Station  
@@ -514,6 +539,18 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
   
 ---
 
+### Shore Rescue  
+`[chi]` 海岸救援  
+*ShoreRescue.vpk*  /  *244326765.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=244326765)] *Updated: 04/26/14*  
+[[GameMaps](https://www.gamemaps.com/details/21887)]  *Updated: 10/10/19*  
+`Stringtable Dictionary Missing`  /  `PLAYER_START Without CHECKPOINT`  
+
+- Map 4 `l4d2_river` is missing stringtable dictionary. Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
+- NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
+
+---
+
 ### Silent Hill: Otherside of Life  
 `[chi]` 寂静岭：另一边的生活  /  `[chi]` 寂静岭：对方的生活  
 *silenthillool_4_7.vpk*  
@@ -566,7 +603,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
  `Malformed Mission File`  
 
 - `OuttroImage` in the mission file missing the `vgui\` prefix.  
-- Survival mode sections in the mission file are missing the names of them, and a pair of outer brackets. [Here](fixed_mission_files/southstreet-3.txt) is a simple fix for all these problems.  
+- Survival mode sections in the mission file are missing the names of them, and a pair of outer braces. [Here](fixed_mission_files/southstreet-3.txt) is a simple fix for all these problems.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -577,7 +614,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/8219)] *Updated: 05/21/13*  
 `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](fixed_mission_files/spacetriprevamp.txt) is a fix. 
+- Mission file has some unpaired braces. [Here](fixed_mission_files/spacetriprevamp.txt) is a fix. 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
 
 ---
@@ -674,7 +711,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
  `Malformed Mission File`  
 
 - An needless mission file `mission_manifest_sample.txt` in the missions folder. It is not a valid mission file, `l4d2_mission_manager` plugin will complain for this every time you start the server.  
-- The mission file has an invalid outtro image setting, and some unpaired brackets. [Here](fixed_mission_files/rpstation.txt) is a fix.  
+- The mission file has an invalid outtro image setting, and some unpaired braces. [Here](fixed_mission_files/rpstation.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -685,7 +722,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/17170)] *Updated: 08/23/16*  
  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](fixed_mission_files/thepunisher.txt) is a fix.  
+- Mission file has some unpaired braces. [Here](fixed_mission_files/thepunisher.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
@@ -738,7 +775,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/7853)] *Updated: 12/15/13*  
 `Malformed Mission File`  
 
-- Mission file has invalid survival map id, and the brackets are unpaired. [Here](fixed_mission_files/warpcore.txt) is a fix.  
+- Mission file has invalid survival map id, and the braces are unpaired. [Here](fixed_mission_files/warpcore.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file. 
 
 ---
@@ -749,7 +786,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 [[GameMaps](https://www.gamemaps.com/details/16615)] *Updated: 04/13/16*  
  `Malformed Mission File`  
 
-- Mission file has some unpaired brackets. [Here](fixed_mission_files/whispersdark.txt) is a fix.  
+- Mission file has some unpaired braces. [Here](fixed_mission_files/whispersdark.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
