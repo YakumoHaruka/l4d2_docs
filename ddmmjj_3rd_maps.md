@@ -3,6 +3,29 @@
 [TOC]
 
 ## 第零波 / The 0th wave
+### D0013 Yama   
+`[chi]`  摩耶山危机   
+*l4d_yama.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/workshop/filedetails/?id=170392241)] *Updated: 12/30/17*  
+**Known Issues**: `None`  
+**Maps**: 5  
+
+1. l4d_yama_1  
+2. l4d_yama_2  
+3. l4d_yama_3  
+4. l4d_yama_4  
+5. l4d_yama_5  
+
+- The link is a collection made by the original author, which includes 4 parts:  
+	- [[Yama part 1](https://steamcommunity.com/sharedfiles/filedetails/?id=767999000)] *Updated: 09/23/16*  
+	- [[Yama part 2](https://steamcommunity.com/sharedfiles/filedetails/?id=170360252)] *Updated: 09/23/16*  
+	- [[Yama part 3](https://steamcommunity.com/sharedfiles/filedetails/?id=169801737)] *Updated: 09/23/16*  
+	- [[Yama Finale Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=1127584577)] *Updated: 08/22/19*  
+	
+	
+
+-----
+
 ### D0015 Claustrophobia   
 `[chi]`  幽闭恐惧症   
 *claustrophobia.vpk*  
@@ -1588,4 +1611,80 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 
 ------
 
-  
+### D8047 Death Summer  
+
+`[chi]` 死亡夏日  
+*death summer.vpk* / *1922745349.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1922745349)] *Updated: 11/28/19*  
+[[GameMaps](https://www.gamemaps.com/details/22122)] *Updated: 11/28/19*  
+**Known Issues**: `Malformed Mission File`  /  `PLAYER_START Without CHECKPOINT`  /  `Start Saferoom Without CHECKPOINT`  
+**Maps**:  6  
+
+1. dayofthedead1  
+2. dayofthedead2  
+3. dayofthedead3  
+4. dayofthedead4  
+5. dayofthedead5  
+6. dayofthedead6  
+
+------
+
+### D8048 Infection Overdrive  
+
+`[chi]` 感染重灾区  /  `[chi]` 感染过载  
+*infectionoverdrive1.3.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/21972)] *Updated: 11/09/19*
+**Known Issues**: `None`  
+**Maps**: 5  
+
+1. rw_beach1  
+2. rw_bridge2  
+3. rw_city3  
+4. rw_artdeco4  
+5. rw_mansion5  
+
+------
+
+### D8049 Chernobyl: Chapter One  
+
+`[chi]` 切尔诺贝利：第一章  
+*8 VPKs:*  
+*1540128972.vpk  /  chernobyl.vpk*  
+*1586868911.vpk  /  chernobyl01.vpk*  
+*1586923137.vpk  /  chernobyl02.vpk*  
+*1586987961.vpk  /  chernobyl03.vpk*  
+*1587047030.vpk  /  chernobyl04.vpk*  
+*1587166349.vpk  /  chernobyl05.vpk*  
+*1586823798.vpk  /  chernobyl06.vpk*  
+*1619051776.vpk  /  chernobyl07.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/workshop/filedetails/?id=1646203073)] *Updated: 12/27/19*  
+[[chernobyl-l4d2.de](http://chernobyl-l4d2.de/)] *No Update Time*
+**Known Issues**: `PLAYER_START Without CHECKPOINT`  
+**Maps**: 5  
+
+1. ch01_jupiter  
+2. ch02_pripyat01  
+3. ch03_pripyat02  
+4. ch04_pripyat03  
+5. ch05_pripyat04  
+
+- The SteamWorkshop link is a collection made by the author, which includes 8 parts:  
+	- [[Chernobyl: Chapter One](https://steamcommunity.com/sharedfiles/filedetails/?id=1540128972)] *Updated: 12/31/19*  
+	- [[Chernobyl: Part 1](https://steamcommunity.com/sharedfiles/filedetails/?id=1586868911)] *Updated: 11/20/19*  
+	- [[Chernobyl: Part 2](https://steamcommunity.com/sharedfiles/filedetails/?id=1586923137)] *Updated: 10/02/19*  
+	- [[Chernobyl: Part 3](https://steamcommunity.com/sharedfiles/filedetails/?id=1586987961)] *Updated: 11/20/19*  
+	- [[Chernobyl: Part 4](https://steamcommunity.com/sharedfiles/filedetails/?id=1587047030)] *Updated: 10/03/19*  
+	- [[Chernobyl: Part 5](https://steamcommunity.com/sharedfiles/filedetails/?id=1587166349)] *Updated: 11/08/19*  
+	- [[Chernobyl: Part 6](https://steamcommunity.com/sharedfiles/filedetails/?id=1586823798)] *Updated: 11/20/19*  
+	- [[Chernobyl: Part 7](https://steamcommunity.com/sharedfiles/filedetails/?id=1619051776)] *Updated: 12/01/19*  
+
+- The home page of the project provides two download links that lead to the different names of the VPKs. Most of the VPKs from these links are the same with the ones on SteamWorkshop currently, except the main VPK, which has a slightly different `addoninfo.txt`:
+| field name | 1540128972.vpk | chernobyl.vpk |
+| --------------- | ------------------------ | -------------------- |
+| addontitle | Chernobyl - Chapter One | Chernobyl - Chapter One: Beta 1.4 |
+| addonversion | 1.0.4 | 1.4 |
+
+ 
+
+------
+

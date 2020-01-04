@@ -1,0 +1,103 @@
+"mission"
+{
+	// Use a short name, since it is used as a tag on the servers for matching
+	// your campaign when looking for a dedicated server.  Generally it should
+	// be something unique.  One suggestion to is use your initials and a short
+	// abbreviated name for your campaign. Avoid spaces and special characters.
+	// Do not change the name when you create a revision, as the matchmaking
+        // system will consider it a different campaign. Instead, use "Version" and 
+        // "DisplayTitle" below to indicate revisions.
+	"Name"		"deathsummer"
+
+	// The version number is used when finding campaigns on dedicated servers
+	// and in matchmaking. If you try to connect to someone in matchmaking
+	// who has a newer version, you will be directed to download the new
+	// version.  You must increment this to the next integer (whole numbers)every
+        // time you release an update. (I.E. 1, 2, 3, 4, etc.)
+	"Version"       "1"
+
+
+	"Author"	"Nevriix"
+
+
+	"Website"	"https://www.artstation.com/jrmlrm"
+
+
+	"DisplayTitle"	"Death Summer"
+	"Description"  	"Miss the summer ?"
+	"Image"		"loadingscreen_deathsummer"
+
+ 	"OuttroImage"	"0"
+
+	
+		"poster"
+	{
+		"posterImage"		            "0"
+		"posterImage_widescreen"		"loadingscreen_deathsummer"
+
+		"fullscreen"		"1"
+ 
+		"posterTitle"		"0"
+		"posterTitle_y"		"0"
+ 
+		"posterTagline"		"0"
+		"posterTagline_y"	"0"
+ 
+		"l4d2_names"		"1"
+ 
+
+
+                //Note L4D2 does not position player names over the poster.
+
+	}
+
+
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "dayofthedead1"
+				"DisplayName" "1: Streets"
+				"Image" "maps/streets"
+			}
+
+			"2"
+			{
+				"Map" "dayofthedead2"
+				"DisplayName" "2: Streets at night"
+				"Image" "maps/streetsatnight"
+			}
+
+			"3"
+			{
+				"Map" "dayofthedead3"
+				"DisplayName" "3: Bunker"
+				"Image" "maps/bunker"
+			}
+
+			"4"
+			{
+				"Map" "dayofthedead4"
+				"DisplayName" "4: Home"
+				"Image" "maps/home"
+			}
+
+			"5"
+			{
+				"Map" "dayofthedead5"
+				"DisplayName" "5: Inside the base"
+				"Image" "maps/insidethebase"
+			}
+			
+			"6"
+			{
+				"Map" "dayofthedead6"
+				"DisplayName" "6: Abandonned beach"
+				"Image" "maps/abandonnedbeach"
+
+			}
+		}
+	}
+}

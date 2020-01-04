@@ -72,6 +72,25 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 
 ---
 
+### Chernobyl: Chapter One  
+`[chi]` 切尔诺贝利：第一章  
+*8 VPKs:*  
+*1540128972.vpk  /  chernobyl.vpk*  
+*1586868911.vpk  /  chernobyl01.vpk*  
+*1586923137.vpk  /  chernobyl02.vpk*  
+*1586987961.vpk  /  chernobyl03.vpk*  
+*1587047030.vpk  /  chernobyl04.vpk*  
+*1587166349.vpk  /  chernobyl05.vpk*  
+*1586823798.vpk  /  chernobyl06.vpk*  
+*1619051776.vpk  /  chernobyl07.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/workshop/filedetails/?id=1646203073)] *Updated: 12/27/19*  
+[[chernobyl-l4d2.de](http://chernobyl-l4d2.de/)] *No Update Time*  
+**Known Issues**: `PLAYER_START Without CHECKPOINT`  
+
+- NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
+
+---
+
 ### China of the Dead  
 `[chi]` 中国丧尸  
 *chinaofthedead.vpk*  
@@ -211,6 +230,19 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
   
 ---
 
+### Death Summer  
+`[chi]` 死亡夏日  
+*death summer.vpk* / *1922745349.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1922745349)] *Updated: 11/28/19*  
+[[GameMaps](https://www.gamemaps.com/details/22122)] *Updated: 11/28/19*  
+`Malformed Mission File`  /  `PLAYER_START Without CHECKPOINT`  /  `Start Saferoom Without CHECKPOINT`
+
+- Mission file has some unpaired braces. [Here](fixed_mission_files/deathsummer.txt) is a fix.  
+- NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
+- The nav areas within the start saferoom of map 5 and map 6 are not marked with  `CHECKPOINT` attribute. Players may be spawned outside of the saferoom. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
+
+---
+
 ### Escape from Malabar  
 `[chi]` 逃离马拉巴尔  
 *exmala_v7.vpk*  
@@ -234,7 +266,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 - The intro of map 1 will stop running after round restart, making the game unplayable. That is because of a `logic_auto` entity in the map which stops the `func_tracktrain` entity used by the intro. Removing that behavior via a [Stripper:Source map configuration file](stripper/maps/urbanhoods_m1_streets.cfg) on the server side solves the problem.  
 - NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
 
---- 
+---
 
 ### Forgotten Mist  
 `[chi]` 被遗忘的迷雾  
