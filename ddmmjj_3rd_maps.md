@@ -1658,7 +1658,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 *1586823798.vpk  /  chernobyl06.vpk*  
 *1619051776.vpk  /  chernobyl07.vpk*  
 [[SteamWorkshop](https://steamcommunity.com/workshop/filedetails/?id=1646203073)] *Updated: 12/27/19*  
-[[chernobyl-l4d2.de](http://chernobyl-l4d2.de/)] *No Update Time*
+[[chernobyl-l4d2.de](http://chernobyl-l4d2.de/)] *No Update Time*  
 **Known Issues**: `PLAYER_START Without CHECKPOINT`  
 **Maps**: 5  
 
@@ -1678,11 +1678,12 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 	- [[Chernobyl: Part 6](https://steamcommunity.com/sharedfiles/filedetails/?id=1586823798)] *Updated: 11/20/19*  
 	- [[Chernobyl: Part 7](https://steamcommunity.com/sharedfiles/filedetails/?id=1619051776)] *Updated: 12/01/19*  
 
-- The home page of the project provides two download links that lead to the different names of the VPKs. Most of the VPKs from these links are the same with the ones on SteamWorkshop currently, except the main VPK, which has a slightly different `addoninfo.txt`:
-| field name | 1540128972.vpk | chernobyl.vpk |
-| --------------- | ------------------------ | -------------------- |
-| addontitle | Chernobyl - Chapter One | Chernobyl - Chapter One: Beta 1.4 |
-| addonversion | 1.0.4 | 1.4 |
+- The home page of the project provides two download links that lead to the different names of the VPKs. Most of the VPKs from these links are the same with the ones on SteamWorkshop currently, except the main VPK, which has a slightly different `addoninfo.txt`:  
+
+| field name | 1540128972.vpk | chernobyl.vpk |  
+| --------------- | ------------------------ | -------------------- |  
+| addontitle | Chernobyl - Chapter One | Chernobyl - Chapter One: Beta 1.4 |  
+| addonversion | 1.0.4 | 1.4 |  
 
  
 
