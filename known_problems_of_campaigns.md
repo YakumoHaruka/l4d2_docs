@@ -48,7 +48,20 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 - Mission file contains non-existing versus/survival map configurations. [Here](fixed_mission_files/blackout_extended.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
----
+---  
+
+### Blight Path  
+`[chi]` 死路  
+*blight_path_ls.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2924)] *Updated: 09/11/11*  
+**Known Issue**: `Malformed Mission File` /  `PLAYER_START without CHECKPOINT`  /  `Survivor Spawn Position Issue`  /  `ED_Alloc`  
+
+- Mission file contains non-existing versus/survival/scavenge map configurations. [Here](fixed_mission_files/bpmissfile.txt) is a fix.  
+- NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
+- One of the `info_survivor_position` entity in map 1 was placed a little bit too low, that some survivors may be spawned on the lower floor of the beginning area. A [Stripper:Source map configuration file](stripper/maps/bp_mapalpha1.cfg) can fix this.  
+- Map 1 has a fairly high base edict number (around 1800) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](stripper/maps/bp_mapalpha1.cfg) to get rid of some prop_dynamics, managed to reduce the edict number in the map to around 1400.   
+
+---  
 
 ### Burning Night  
 `[chi]` 燃烧之夜  
@@ -529,13 +542,33 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
   
 ---
 
+### Precinct 84  
+`[chi]` 84警区  
+*precinct 84 source.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/19796)] *Updated: 07/03/18*  
+`Malformed Mission File`  
+
+- Versus and Survival mode map 1 is `p84m1_apartments` in mission file yet the map is actually `p84m1_apartment`. And, versus mode map 2 is `p84m2_slums` in mission file which does not exist and should be `p84m2_eltrain`. [Here](fixed_mission_files/precinct84.txt) is a fix.  
+
+---
+
+### Questionable Ethics : Alpha test  
+`[chi]` 伦理问题2  
+*qe2.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/3589)] *Updated: 10/15/12*  
+**Known Issue**: `Malformed Mission File`  
+
+- Mission file has some unpaired braces. [Here](fixed_mission_files/qe2.txt) is a fix.  
+
+---
+
 ### Resident Evil Outbreak  
 `[chi]` 生化危机：爆发  
 *Outbreak.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2526)] *Updated: 10/12/16*  
 `ED_Alloc`  
 
-- The 2nd map `re_outbreak` has a very high `edict` count (about 2000 when there are 1 human and 3 survivor bots) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](stripper/maps/re_outbreak.cfg), managed to reduce the entity number in the map to around 1500. Still need some live tests on our 16 survivors server.  
+- The 2nd map `re_outbreak` has a very high `edict` count (about 2000 when there are 1 human and 3 survivor bots) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](stripper/maps/re_outbreak.cfg), managed to reduce the entity number in the map to around 1500.   
 - The 5th map `re_hellfire` also has a fairly high `edict` count (around 1600 when there are 1 human and 3 survivor bots) from the beginning. Here's a [Stripper:Source map configuration file](stripper/maps/re_hellfire.cfg) managed to reduce the entity number in the map to around 1500. Still need some live tests on our 16 survivors server.  
 
 ---

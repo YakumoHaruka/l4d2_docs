@@ -2,7 +2,105 @@
 
 [TOC]
 
-## 第零波 / The 0th wave
+## 第零波 / The 0th wave  
+### D0001 Precinct 84  
+`[chi]` 84警区  
+*precinct 84 source.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/19796)] *Updated: 07/03/18*  
+**Known Issue**: `Malformed Mission File`  
+**Maps**: 4  
+
+1. p84m1_apartment  
+2. p84m2_eltrain  
+3. p84m3_tunnel  
+4. p84m4_station  
+
+-----
+
+### D0002 Haunted Forest  
+`[chi]` 闹鬼森林  
+*hauntedforest_v3.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2653)] *Updated: 04/23/11*  
+**Known Issue**: `None`  
+**Maps**: 4  
+
+1. hf01_theforest  
+2. hf02_thesteeple  
+3. hf03_themansion  
+4. hf04_escape  
+
+-----
+
+### D0003 Questionable Ethics : Alpha test  
+`[chi]` 伦理问题2  
+*qe2.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/3589)] *Updated: 10/15/12*  
+**Known Issue**: `Malformed Mission File`  
+**Maps**: 5  
+
+1. qe2_ep1  
+2. qe2_ep2  
+3. qe2_ep3  
+4. qe2_ep4  
+5. qe2_ep5  
+
+-----
+
+### D0004 Dead Series  
+`[chi]` 死亡系列  
+*deadseries.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2701)] *Updated: 09/09/13*  
+**Known Issue**: `None`  
+**Maps**: 4  
+
+1. Dead_Series1  
+2. Dead_Series2  
+3. Dead_Series3  
+4. Dead_Series4  
+
+-----
+
+### D0005 Drop Dead Gorges  
+`[chi]` 死亡峡谷  
+*ddg_v2_1.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2135)] *Updated: 12/19/13*  
+**Known Issue**: `None`  
+**Maps**: 3  
+
+1. ddg1_tower_v2_1  
+2. ddg2_gristmill_v2  
+3. ddg3_bluff_v2_1  
+
+-----
+
+### D0006 City 17  
+`[chi]` 17号城市  
+*city17l4d2.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2506)] *Updated: 06/30/10*  
+**Known Issue**: `None`  
+**Maps**: 5  
+
+1. l4d2_city17_01  
+2. l4d2_city17_02  
+3. l4d2_city17_03  
+4. l4d2_city17_04  
+5. l4d2_city17_05  
+
+-----
+
+### D0007 Blight Path  
+`[chi]` 死路  
+*blight_path_ls.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2924)] *Updated: 09/11/11*  
+**Known Issue**: `Malformed Mission File` /  `PLAYER_START without CHECKPOINT`  /  `Survivor Spawn Position Issue`  /  `ED_Alloc`  
+**Maps**: 3  
+
+1. bp_mapalpha1  
+2. bp_02fix  
+3. bp_map_03  
+
+-----
+
 ### D0013 Yama   
 `[chi]`  摩耶山危机   
 *l4d_yama.vpk*  
@@ -1680,10 +1778,10 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 
 - The home page of the project provides two download links that lead to the different names of the VPKs. Most of the VPKs from these links are the same with the ones on SteamWorkshop currently, except the main VPK, which has a slightly different `addoninfo.txt`:  
 
-| field name | 1540128972.vpk | chernobyl.vpk |  
-| --------------- | ------------------------ | -------------------- |  
-| addontitle | Chernobyl - Chapter One | Chernobyl - Chapter One: Beta 1.4 |  
-| addonversion | 1.0.4 | 1.4 |  
+| field name | 1540128972.vpk | chernobyl.vpk |
+| --------------- | ------------------------ | -------------------- |
+| addontitle | Chernobyl - Chapter One | Chernobyl - Chapter One: Beta 1.4 |
+| addonversion | 1.0.4 | 1.4 |
 
  
 
