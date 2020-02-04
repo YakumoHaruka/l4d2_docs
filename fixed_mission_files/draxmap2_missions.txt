@@ -1,0 +1,68 @@
+"mission"
+{
+	"Name"		"Draxmap2"
+	"Version"       "9"
+	"Author"	"Draxonfly"
+	"Website"	"www.draxonfly.com/Death_Strip"
+	"DisplayTitle"	"Death Strip"
+	"Description"  	"Will you turn the page and survive?"
+ 	"OuttroImage"	"vgui\outrotitle_deathstrip"
+	"survivor_set"	"2"
+
+	"poster"
+	{
+		"posterImage"		"loadingscreen_deathstrip"
+
+	}
+
+	"modes"
+	{
+		"coop"
+		{
+			"1"
+			{
+				"Map" "l4d2_draxmap1"
+				"DisplayName" "Issue 1"
+				"Image" "maps/l4d2_draxmap1"
+			}
+
+			"2"
+			{
+				"Map" "l4d2_draxmap2"
+				"DisplayName" "Issue 2"
+				"Image" "maps/l4d2_draxmap2"
+			}
+
+			"3"
+			{
+				"Map" "l4d2_draxmap3"
+				"DisplayName" "Issue 3"
+				"Image" "maps/l4d2_draxmap3"
+			}
+
+			"4"
+			{
+				"Map" "l4d2_draxmap4"
+				"DisplayName" "Issue 4"
+				"Image" "maps/l4d2_draxmap4"
+			}
+
+			"5"
+
+			{
+				"Map" "l4d2_draxmap5"
+				"DisplayName" "Issue 5"
+				"Image" "maps/l4d2_draxmap5"
+			}
+
+			"6"
+
+			{
+				"Map" "l4d2_draxmap6"
+				"DisplayName" "Final Issue"
+				"Image" "maps/l4d2_draxmap6"
+			}
+		}
+	}
+
+}

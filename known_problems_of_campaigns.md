@@ -10,7 +10,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 绝对零度  
 *absolutezero.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/20972)] *Updated: 01/16/19*  
- `ED_Alloc`  
+**Known Issues**:  `ED_Alloc`  
 
 - The 1st map `l4d_zero01_south` has a fairly high `edict` count (around 1800 when there are 1 human and 3 survivor bots) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](stripper/maps/l4d_zero01_south.cfg), managed to reduce the entity number in the map to around 1500.  
   
@@ -20,7 +20,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 异形三部曲：第一章  
 *alientrilogy_section1_V1_1.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/3075)] *Updated: 10/21/11*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/alientri.txt).   
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -31,7 +31,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 一条退路  
 *apathtoexit.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/19892)] *Updated: 03/15/18*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - Mission file contains empty versus/survival/scavenge map configurations. [Here](fixed_mission_files/apathtoexit.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -43,31 +43,32 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 *blackout_extended.vpk*  
 [[L4D2.cc](http://www.kk175.com/map/hezuo/2013/0330/571.html)] *Updated: 03/31/14*  
 [[3DMGame](https://dl.3dmgame.com/patch/102073.html)] *Updated: 04/06/17*  
- `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
 - Mission file contains non-existing versus/survival map configurations. [Here](fixed_mission_files/blackout_extended.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
----  
+---
 
 ### Blight Path  
 `[chi]` 死路  
 *blight_path_ls.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2924)] *Updated: 09/11/11*  
-**Known Issue**: `Malformed Mission File` /  `PLAYER_START without CHECKPOINT`  /  `Survivor Spawn Position Issue`  /  `ED_Alloc`  
+**Known Issues**: `Malformed Mission File` /  `PLAYER_START without CHECKPOINT`  /  `Survivor Spawn Position Issue`  /  `ED_Alloc`  
 
 - Mission file contains non-existing versus/survival/scavenge map configurations. [Here](fixed_mission_files/bpmissfile.txt) is a fix.  
 - NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
 - One of the `info_survivor_position` entity in map 1 was placed a little bit too low, that some survivors may be spawned on the lower floor of the beginning area. A [Stripper:Source map configuration file](stripper/maps/bp_mapalpha1.cfg) can fix this.  
 - Map 1 has a fairly high base edict number (around 1800) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](stripper/maps/bp_mapalpha1.cfg) to get rid of some prop_dynamics, managed to reduce the edict number in the map to around 1400.   
+- Only the `server` side needs to redeploy the repaired VPK file.  
 
----  
+---
 
 ### Burning Night  
 `[chi]` 燃烧之夜  
 *burningnight.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/15991)] *Updated: 01/03/16*  
-`Stringtable Dictionary Missing`  /  `Low Uniqueness Map Names`  
+**Known Issues**: `Stringtable Dictionary Missing`  /  `Low Uniqueness Map Names`  
 
 - Because of the low uniqueness map names of this campaign, this campaign would easily conflicts with some others. As far as I known, map 2 `streets` conflicts with `Dead St 16` map 2, and map 3 `factory` conflicts with `Left 4 Dust 2` map 1. Currently I have no perfect solution to this problem. You may either not to host the conflicting campaigns at the same time, or try to reorder the addons in `left4dead2/addonlist.txt` manually.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required. 
@@ -79,7 +80,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 *centro.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2368)] *Updated: 09/19/10*  
 [[OrangesGame](http://www.orangesgame.com/map/20150826/43.html)] *Updated: 08/26/15*  
-`Survivor Spawn Position Issue` 
+**Known Issues**: `Survivor Spawn Position Issue` 
 
 - On first map, the survivor spawns on top of a very high building, and the ground is not flat. On a dedicated server, I found that sometimes the player would spawn under the ground, falls to the bottom and dies. I made a [Stripper:Source map configuration file](stripper/maps/gasometer.cfg) to modify the `info_player_start` and `info_survivor_position` entities to higher posions. The result turns out fine.  
 
@@ -108,18 +109,29 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 中国丧尸  
 *chinaofthedead.vpk*  
 [[L4D2.cc](http://www.kk175.com/map/hezuo/2013/0323/527.html)] *Updated: 04/03/2013*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/kaplin.txt).  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
 
+### Claustrophobia   
+`[chi]`  幽闭恐惧症   
+*claustrophobia.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/3987)] *Updated: 12/04/12*  
+**Known Issues**: `Checkpoint Missing`  
+
+- Some or all of the NAV areas in the starting saferoom of map 3 and 4 are not marked with `CHECKPOINT` attribute. Infected may start spawning before survivors open the saferoom door when these areas are stepped in accidentally.  
+- Only the `server` side needs to redeploy the repaired VPK file.  
+
+---
+
 ### ClockTown Beta  
 `[chi]` 钟镇  
 *clocktown_beta.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/9631)] *Updated: 02/20/14*  
-`Stringtable Dictionary Missing`  
+**Known Issues**: `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
 
@@ -129,7 +141,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 合作 2  
 *collaboration 2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/19317)] *Updated: 09/21/17*  
- `Stringtable Dictionary Missing`  /  `Malformed Mission File`  /  `Wrong Map Name`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  /  `Wrong Map Name`  
 
 - Due to a space character in the name of this mission, you can't start the map in the game. The space character in mission file name also cause some trouble to the ACS/LMM plugin.   
 - The mission file contains invalid Image/OuttroImage/Poster settings. All the map's images are pointed to a non-existing file. Also, I suppose this campaign is designed to play with L4D1 survivor set because they are in the poster image. But the mission file is not specifying that, so by default there's the L4D2 survivor set in the game. [Here](fixed_mission_files/collaboration2.txt) is my fixed version of the mission file, which has the space character in the file name removed.  
@@ -142,7 +154,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 车队  
 *convoy.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/7574)] *Updated: 10/16/13*  
- `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
 - Mission file has some unpaired braces. [Here](fixed_mission_files/convoy.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -153,7 +165,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 激情碰撞  
 *crescendocollision.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/6704)] *Updated: 05/11/13*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -163,7 +175,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]`  黑暗森林（加长版）   
 *darkwood_extended.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/14120)] *Updated: 09/22/18*  
-`info_landmark Error` 
+**Known Issues**: `info_landmark Error` 
 
 - The info_landmark on map 4 (dw_otherworld) is below the elevator, when players finished the last map (dw_complex), they will be spawned at info_landmark position, and fall to the bottom and dead. This can be fix with a [Stripper:Source map configuration file](stripper/maps/dw_otherworld.cfg).
 
@@ -173,7 +185,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 重复的日子  
 *daysrepeat.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/20083)] *Updated: 05/04/18*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - Mission file contains empty versus/survival/scavenge map configurations. [Here](fixed_mission_files/daysrepeat.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -184,7 +196,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 死亡监狱  
 *dead_jail_hard.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/14005)] *Updated: 01/30/15*  
-`Stringtable Dictionary Missing`  /  `Nested VPK File`  
+**Known Issues**: `Stringtable Dictionary Missing`  /  `Nested VPK File`  
 
 - There's another `dead_jail_hard.vpk` within the `dead_jail_hard.vpk` which seemed to be a packing problem of the author.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -195,7 +207,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 死亡矿井 2  
 *deadmines2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/17974)] *Updated: 02/13/17*  
- `Stringtable Dictionary Missing`   
+**Known Issues**:  `Stringtable Dictionary Missing`   
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -205,7 +217,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 死亡时刻 2  
 *deadontime2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2416)] *Updated: 02/26/10*  
- `Stringtable Dictionary Missing`  /   `Malformed Mission File`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /   `Malformed Mission File`  
 
 - Mission file contains inactive survival/scavenge map settings. A removed version can be found [here](fixed_mission_files/deadontimeii.txt).  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -216,7 +228,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 死圣  
 *DeadSt16.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/5673)] *Updated: 01/01/16*  
-`Low Uniqueness Map Names`  
+**Known Issues**: `Low Uniqueness Map Names`  
 
 - Because of the low uniqueness map names of this campaign, this campaign would easily conflicts with some others. As far as I known, map 2 `streets` conflicts with `Burning Night` map 2. Currently I have no perfect solution to this problem. You may either not to host the conflicting campaigns at the same time, or try to reorder the addons in `left4dead2/addonlist.txt` manually.  
 
@@ -226,7 +238,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 我的世界 II  
 *deathcraft2.1.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2473)] *Updated: 11/05/12*  
-`Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 
 - Mission file contains versus/survival map configurations that refer to non-existing maps. [Here](fixed_mission_files/deathcraft.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -237,10 +249,21 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 死亡时间  
 *death_hour.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2392)] *Updated: 09/27/10*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
+---
+
+### Death Strip  
+`[chi]` 死亡地带  
+*DeathStrip.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/3470)] *Updated: 09/19/11*  
+**Known Issues**: `Malformed Mission File`  
+
+- Mission file contains non-existing versus/survival/scavenge map configurations. [Here](fixed_mission_files/draxmap2_missions.txt) is a fix.  
+- Only the `server` side needs to redeploy the repaired VPK file.  
+
 ---
 
 ### Death Summer  
@@ -248,7 +271,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 *death summer.vpk* / *1922745349.vpk*  
 [[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1922745349)] *Updated: 11/28/19*  
 [[GameMaps](https://www.gamemaps.com/details/22122)] *Updated: 11/28/19*  
-`Malformed Mission File`  /  `PLAYER_START Without CHECKPOINT`  /  `Start Saferoom Without CHECKPOINT`
+**Known Issues**: `Malformed Mission File`  /  `PLAYER_START Without CHECKPOINT`  /  `Start Saferoom Without CHECKPOINT`
 
 - Mission file has some unpaired braces. [Here](fixed_mission_files/deathsummer.txt) is a fix.  
 - NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
@@ -260,7 +283,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 逃离马拉巴尔  
 *exmala_v7.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2513)] *Updated: 08/27/11*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - The poster section of the mission file causes parse error due to a  line of description which should be commented. [Here](fixed_mission_files/exmala.txt) is a simple fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -281,11 +304,22 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 
 ---
 
+### Firetower Trail  
+`[chi]` 消防瞭望塔  
+*firetowertrail.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2752)] *Updated: 04/06/14*  
+**Known Issues**: `Checkpoint Missing`  
+
+- Some or all of the NAV areas in the starting saferoom of map 4 and 5 are not marked with `CHECKPOINT` attribute. Infected may start spawning before survivors open the saferoom door when these areas are stepped in accidentally.  
+- Only the `server` side needs to redeploy the repaired VPK file.  
+
+---
+
 ### Forgotten Mist  
 `[chi]` 被遗忘的迷雾  
 *forgottenmist.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/8240)] *Updated: 06/02/13*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
 
@@ -295,7 +329,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 玩具熊的披萨餐厅  
 *fnaf1v3.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/14164)] *Updated: 01/01/19*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - Unexpected newlines in mission description.  
 - The 5th map's image setting in mission file contains an invalid character `?`. As long as there's no such thing as the 5th map's image, I used the 4th map's image to fix this problem. [Here](fixed_mission_files/fnaf1.txt) is my fix.  
@@ -307,7 +341,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 `[chi]` 哈哈  
 *HAHA1.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/19241)] *Updated: 08/21/17*  
- `Stringtable Dictionary Missing`  /  `Mission File Name Confliction`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Mission File Name Confliction`  
 
 - Mission file name `hits.txt` conflicts with [[The Lost Tutorial](https://www.gamemaps.com/details/3680)]. Rename it if you have to host them both.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -324,7 +358,7 @@ Here lists the known Left4Dead2 community campaigns suffering from various probl
 *5. hl2_patches_2.vpk*   
 Part 1: [[GameMaps](https://www.gamemaps.com/details/21597)] *Updated: 09/14/19*  
 Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*  
-`Memory Leak`   /  `Map Transition Affecting Key Item`  
+**Known Issues**: `Memory Leak`   /  `Map Transition Affecting Key Item`  
 
 - Level 58: d3_c17_12_d has serious memory leak related to the 'Striders'. The memory usage contantly grows since the map is loaded, until all striders are dead or the server memory is exhausted. Before the author of the map fix it, I am using [this](stripper/maps/d3_c17_12_d.cfg) Stripper:Source map configuration file to stop the Striders animation, which can prevent the memory leak from happen, but the Striders won't be functional(they won't shoot at the survivors then).
 - Level 56: d3_c17_10b_d requires a  grenade launcher to destroy the turret at the begining of the level. The map has provided 4 grenade launchers in the room next to the begining safe room. It works correctly if this map is opened directly, but fails if this map is loaded because of finishing the last map(d3_c17_10a_d). Before the author of the map fix it, I am using this [Stripper:Source map configuration file](stripper/maps/d3_c17_10b_d.cfg) to move one of those grenade launcher out of the affected area to get around the problem.
@@ -335,7 +369,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 死亡大厅  
 *hallsofdeathv2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/5559)] *Updated: 10/06/12*  
- `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
 - Mission file contains empty survival/scavenge map configurations. [Here](fixed_mission_files/hallsofdeath.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -346,7 +380,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 冰冷的心  
 *heartbreakfridge.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/3278)] *Updated: 09/19/11*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -356,7 +390,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 呵呵 2  
 *hehe2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/18542)] *Updated: 05/13/17*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -366,7 +400,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 呵呵 4  
 *hehe4.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/18224)] *Updated: 03/25/17*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -376,7 +410,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 呵呵 8  
 *hehe8.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/20341)] *Updated: 07/06/18*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -386,7 +420,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 歇斯底里  /  `[chi]` 海斯特里亚  /  `[chi]` 逃离施蒂里亚  
 *hystyria.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/8066)] *Updated: 05/02/13*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -396,7 +430,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 踢出  
 *kickedout.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/8091)] *Updated: 05/14/13*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -406,7 +440,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 地狱迷宫  
 *labirinferno.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/15286)] *Updated: 08/21/15*  
-`Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 
 - The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/labirinferno.txt).  
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -417,7 +451,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 最后的心跳  
 *lastheartbeat.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/4142)] *Updated: 02/02/12*  
- `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
 - Mission file has some unpaired braces. [Here](fixed_mission_files/lastheartbeat.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -428,7 +462,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 最后的旅程  
 *lastride.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/16525)] *Updated: 03/28/16*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -438,7 +472,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 求生之毁灭战士  
 *left4doom.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2410)] *Updated: 12/24/09*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -448,7 +482,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 尘埃 2  
 *left4dust2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/7073)] *Updated: 06/16/13*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - The 3,5,6,8,10 map sections in the mission file are missing the name strings before them. I don't know whether this is on purpose, in order to hide these maps? Also, there are some unpaired braces. [Here](fixed_mission_files/left4dust2.txt) is my fixed version.  
 - Players reported that there are some other problems in game, I have not investigated yet.  
@@ -460,7 +494,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 逃离普里皮亚季  
 *leftinprypiat.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/16942)] *Updated: 08/21/16*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - The name of `coop_boss_spawning` section in the mission file is commented, leaving the section dangled. [Here](fixed_mission_files/leftinprypiat.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -471,7 +505,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 一起来建造2：核心  
 *lb2core.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/4257)] *Updated: 10/14/13*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -481,7 +515,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 大迷宫  
 *mass_maze.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/4371)] *Updated: 12/25/16*  
- `Stringtable Dictionary Missing`  /  `Wrong Map Name`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Wrong Map Name`  
 
 - The second map's name should be `mass_maze_2nd_stage.bsp` but the actual file was named `mass_maze_2nd_stage_d.bsp`.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -493,7 +527,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 *myfear.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/7656)] *Updated: 07/22/13*  
 [L4D2.cc](http://www.kk175.com/map/hezuo/2013/0815/1036.html) Update: 08/15/13  
- `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
 - Mission file has some unpaired braces. [Here](fixed_mission_files/myfear.txt) is a fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -504,7 +538,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 死亡汽油弹  
 *napalmdeath.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2601)] *Updated: 08/18/11*  
-`Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 
 - Mission file has invalid survival/scavenge map configurations. [Here](fixed_mission_files/thorfinnmap4.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -515,7 +549,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 绝非宿命 2  
 *nofate2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/18033)] *Updated: 02/19/17*  
-`Classname Missing From Entity`  
+**Known Issues**: `Classname Missing From Entity`  
 
 - There's no known solution to this problem for me currently.   
   
@@ -536,7 +570,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 地下供电所  
 *l4d2_powerstation.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/7339)] *Updated: 01/21/13*  
-`Stringtable Dictionary Missing`  
+**Known Issues**: `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -546,9 +580,10 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 84警区  
 *precinct 84 source.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/19796)] *Updated: 07/03/18*  
-`Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 
 - Versus and Survival mode map 1 is `p84m1_apartments` in mission file yet the map is actually `p84m1_apartment`. And, versus mode map 2 is `p84m2_slums` in mission file which does not exist and should be `p84m2_eltrain`. [Here](fixed_mission_files/precinct84.txt) is a fix.  
+- Only the `server` side needs to redeploy the repaired VPK file.  
 
 ---
 
@@ -556,9 +591,10 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 伦理问题2  
 *qe2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/3589)] *Updated: 10/15/12*  
-**Known Issue**: `Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 
 - Mission file has some unpaired braces. [Here](fixed_mission_files/qe2.txt) is a fix.  
+- Only the `server` side needs to redeploy the repaired VPK file.  
 
 ---
 
@@ -566,7 +602,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 生化危机：爆发  
 *Outbreak.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2526)] *Updated: 10/12/16*  
-`ED_Alloc`  
+**Known Issues**: `ED_Alloc`  
 
 - The 2nd map `re_outbreak` has a very high `edict` count (about 2000 when there are 1 human and 3 survivor bots) from the beginning, which will easily exceed the entity limit when hosted on a dedicated server for more than 4 survivors, result in an `ED_Alloc` error. I wrote a [Stripper:Source map configuration file](stripper/maps/re_outbreak.cfg), managed to reduce the entity number in the map to around 1500.   
 - The 5th map `re_hellfire` also has a fairly high `edict` count (around 1600 when there are 1 human and 3 survivor bots) from the beginning. Here's a [Stripper:Source map configuration file](stripper/maps/re_hellfire.cfg) managed to reduce the entity number in the map to around 1500. Still need some live tests on our 16 survivors server.  
@@ -577,9 +613,21 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 空军之路  /  `[chi]` F18之路  
 *road_to_f18_v1.1.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/20891)] *Updated: 12/24/18*  
-`Melee Weapon Banned`  
+**Known Issues**: `Melee Weapon Banned`  
 
 - Actually this isn't a real problem. The melee weapons are banned on purpose by the author. If you use a sourcemod plugin like the `l4d2_melee_in_the_saferoom`, a bunch of hunter claws will be spawned instead. If your server really needs melee weapons to work with, you can modify the mission file to enable them, like [this](fixed_mission_files/roadtof18.txt). Only the server side needs to redeploy the modified VPK.  
+
+---
+
+### D0011 Run To The Hills  
+`[chi]` 逃往山丘  
+*runtothehills.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2559)] *Updated: 05/02/11*  
+**Known Issues**: `Malformed Mission File`  /  `PLAYER_START without CHECKPOINT`  
+
+- Mission file contains non-existing survival/scavenge maps. [Here](fixed_mission_files/runtothehills.txt) is a fix.  
+- NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
+- Only the `server` side needs to redeploy the repaired VPK file.  
 
 ---
 
@@ -587,7 +635,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 喋血乡间  
 *253090805.vpk*  
 [[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=253090805)] *Updated: 04/27/14*  
-`Stringtable Dictionary Missing`  
+**Known Issues**: `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
 
@@ -597,7 +645,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 摩西岛阴影  
 *shadowmosesisland.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2600)] *Updated: 07/22/13*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - Mission file contains empty versus/survival/scavenge map configurations. [Here](fixed_mission_files/shadowmosesisland.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -609,7 +657,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 *ShoreRescue.vpk*  /  *244326765.vpk*  
 [[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=244326765)] *Updated: 04/26/14*  
 [[GameMaps](https://www.gamemaps.com/details/21887)]  *Updated: 10/10/19*  
-`Stringtable Dictionary Missing`  /  `PLAYER_START Without CHECKPOINT`  
+**Known Issues**: `Stringtable Dictionary Missing`  /  `PLAYER_START Without CHECKPOINT`  
 
 - Map 4 `l4d2_river` is missing stringtable dictionary. Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
 - NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
@@ -620,7 +668,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 寂静岭：另一边的生活  /  `[chi]` 寂静岭：对方的生活  
 *silenthillool_4_7.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/7592)] *Updated: 11/03/14*  
-`Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 
 - The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/shool.txt).  
 - Only the `server` side needs to redeploy the repaired VPK file.  
@@ -632,7 +680,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 *skipping_class.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/6730)] *Updated: 07/04/13*  
 [[L4D2.cc](http://www.kk175.com/map/hezuo/2013/0127/188.html)] *Updated: 05/08/14*  
-`Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 
 - The coop section of the mission file is not closed, while there are invalid versus/survival/scavenge map configurations derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/skippingclass.txt). 
 - The mission file was named `data inside.txt` which contains a space character. This doesn't cause problem, but I renamed it to `skippingclass.txt` in the fix for better reading.  
@@ -644,7 +692,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 圣光熄灭  
 *SolemnBlackout.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2389)] *Updated: 10/14/10*  
- `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
 - The mission file contains a scavenge map section with an invalid name `"0"`.  A simple fix [here](fixed_mission_files/solemnblackout.txt).  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -655,7 +703,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 些许有趣的东东  
 *somefun.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/9391)] *Updated: 01/12/14*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -665,7 +713,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 南大街 3  
 *southstreet3.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/18196)] *Updated: 03/19/17*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - `OuttroImage` in the mission file missing the `vgui\` prefix.  
 - Survival mode sections in the mission file are missing the names of them, and a pair of outer braces. [Here](fixed_mission_files/southstreet-3.txt) is a simple fix for all these problems.  
@@ -677,7 +725,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 太空之旅  
 *space trip revamp.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/8219)] *Updated: 05/21/13*  
-`Stringtable Dictionary Missing`  /  `Malformed Mission File`  
+**Known Issues**: `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
 - Mission file has some unpaired braces. [Here](fixed_mission_files/spacetriprevamp.txt) is a fix. 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -689,7 +737,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 *stargate2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/6963)] *Updated: 01/31/17*  
 [[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=854169313)] *Updated: 10/13/18*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -699,7 +747,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 风暴要塞  
 *stormingcitadelalpha.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/14876)] *Updated: 10/11/15*  
-`Stringtable Dictionary Missing`  /  `Malformed Mission File`  
+**Known Issues**: `Stringtable Dictionary Missing`  /  `Malformed Mission File`  
 
 - Mission file has invalid versus/survival/scavenge/holdout map configurations. [Here](fixed_mission_files/stormingcitadelalpha.txt) is a fix.  And, according to the author's comment,  only the first 2 maps are actually released as playable. 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required. 
@@ -710,7 +758,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 太极  
 *taiji.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/9524)] *Updated: 02/27/14*  
-`Stringtable Dictionary Missing`  
+**Known Issues**: `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required. 
 
@@ -720,7 +768,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 古代迷宫  
 *the_ancient_maze.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2811)] *Updated: 05/04/11*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -730,7 +778,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 血腥荒野 / 血腥的摩尔人  
 *thebloodymoors.vpk*  
 [[GameMaps]((https://www.gamemaps.com/details/6772)] *Updated: 11/28/13*  
- `Model Missing`  
+**Known Issues**:  `Model Missing`  
 
 - There are models missing in map 3 and map 4 which cause random crashes on client side. A [fix](https://steamcommunity.com/sharedfiles/filedetails/?id=1341202052) is available in the Steam workshop.  
   
@@ -740,7 +788,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 过山车   /  `[chi]` 港口  
 *l4d2_thecoaster.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/19484)] *Updated: 11/15/17*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -751,7 +799,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 拉扎尔城堡的诅咒  /  `[chi]` 城堡诅咒  
 *thecurseoflazarcastle.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/21267)] *Updated: 05/30/19*  
-`Malformed Mission File`  / `Checkpoint Missing` / `NavLadder Crash`  
+**Known Issues**: `Malformed Mission File`  / `Checkpoint Missing` / `NavLadder Crash`  
 
 - The mission file contains the non-existing versus/survival/scavenge map configurations likely derived from the `Deadline2` example campaign. A simple fix [here](fixed_mission_files/thecurseofcastlelazar.txt). Only the `server` side needs to redeploy the repaired VPK file.  
 - Checkpoint is missing at the beginning of the first map, which leads to no safe area for survivors while there is a rather long intro. Although the author build an air wall to block the infected from getting in before the intro finish, Spitter's spit can shoot through it and hurts the survivors. If this matters, you will need to edit the NAV of the first map, mark the areas with the PLAYER_START attribute and add CHECKPOINT attribute to them. Luckily this only need to redeploy on the `server` side.
@@ -763,7 +811,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 教区原貌  
 *parishbeta.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/8117)] *Updated: 02/13/14*  
-`Stringtable Dictionary Missing`  
+**Known Issues**: `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
 
@@ -773,7 +821,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]`  警察局  
 *thepolicedepartment.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/6918)] *Updated: 03/13/13*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - An needless mission file `mission_manifest_sample.txt` in the missions folder. It is not a valid mission file, `l4d2_mission_manager` plugin will complain for this every time you start the server.  
 - The mission file has an invalid outtro image setting, and some unpaired braces. [Here](fixed_mission_files/rpstation.txt) is a fix.  
@@ -785,18 +833,32 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 惩罚者  
 *gamemaps-thepunisher.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/17170)] *Updated: 08/23/16*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - Mission file has some unpaired braces. [Here](fixed_mission_files/thepunisher.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
 
+### The Return: The Sequel  
+`[chi]` 回归：续集  /  `[chi]` 逃离路易斯安纳  
+*1454429897.vpk*  /  *thereturn_sequel.vpk*  
+[[~~GameMaps~~](http://www.gamemaps.com/details/15828)] ~~*ABANDONED*~~  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1454429897)] *Updated: 07/27/18*  
+**Known Issues**: `PLAYER_START without CHECKPOINT`  /  `NAV Flow Issue`
+
+- NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
+- Some of the NAV areas in the starting saferoom of map 2, 3 and 4 are not marked with `CHECKPOINT` attribute. When survivor steps on them, infected may start spawning. Not a big problem for most of the case though. Can be fixed with a new NAV file deploy on the server side that marks them with CHECKPOINT attribute properly.  
+- There is a rescue radio in the starting saferoom of map 5 which starts the finale. But as there is no `info_target` entity with targetname `nav_flow_target` is given in this map, the NAV flow calculation will mark the area under the rescue radio as the goal area. Add the missing entity with a [Stripper:Source map configuration file](stripper/maps/the_return_lvl5.cfg) fixes this problem.  
+- Only the `server` side needs to redeploy the repaired VPK file and the Stripper:Source map configuration file.  
+
+---
+
 ### The Woods   
 `[chi]` 森林  
 *the woods.vpk*   
 [[GameMaps](https://www.gamemaps.com/details/18307)] *Updated: 04/09/17*  
- `Stringtable Dictionary Missing`  /  `Wrong Map Name`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Wrong Map Name`  
 
 - The mission file describes the map names as `l4d_thewoods02` `l4d_thewoods03` and so does the actual BSP and NAV files named. But the map names within the BSP files are written `l4d_thewoods_02` `l4d_thewoods_03`. Thus when players make their way to the safe room in first map, the loading screen comes and goes, but there's no actual map change happens. [Here](fixed_mission_files/thewoods.txt) is a fix to this problem.  And you will need to rename the BSP and NAV files' name as well.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -807,7 +869,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 陷阱地图 3.0  
 *trapsmap_3_-_08_01_2011.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2652)] *Updated: 01/08/11*  
- `Stringtable Dictionary Missing`  /  `Mission Name Confliction`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Mission Name Confliction`  
 
 - Mission name conflicts with the example campaign `DeadLine2`. [Here](fixed_mission_files/trapsmap.txt) is a simple fix.  
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
@@ -818,7 +880,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 曲折的命运  
 *twistedfates.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/8065)] *Updated: 05/02/13*  
-`Stringtable Dictionary Missing`  
+**Known Issues**: `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required. 
 
@@ -828,7 +890,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 虚幻锦标赛  
 *l4d2unreal.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2484)] *Updated: 03/26/10*  
- `Stringtable Dictionary Missing`  
+**Known Issues**:  `Stringtable Dictionary Missing`  
 
 - Redistribution of the repaired VPK file to both the `server` and `client` side is required.  
   
@@ -838,7 +900,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 曲速核心  
 *WARPCORE.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/7853)] *Updated: 12/15/13*  
-`Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 
 - Mission file has invalid survival map id, and the braces are unpaired. [Here](fixed_mission_files/warpcore.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file. 
@@ -849,18 +911,30 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 `[chi]` 暗中低语  
 *whispersinthedark.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/16615)] *Updated: 04/13/16*  
- `Malformed Mission File`  
+**Known Issues**:  `Malformed Mission File`  
 
 - Mission file has some unpaired braces. [Here](fixed_mission_files/whispersdark.txt) is a fix.  
 - Only the `server` side needs to redeploy the repaired VPK file.  
   
 ---
 
+### Yama   
+`[chi]`  摩耶山危机   
+*l4d_yama.vpk*  
+[[SteamWorkshop](https://steamcommunity.com/workshop/filedetails/?id=170392241)] *Updated: 12/30/17*  
+**Known Issues**: `PLAYER_START without CHECKPOINT`  / `Checkpoint Missing`  
+
+- NAV areas marked with attribute `PLAYER_START` in map 1 are not marked with `CHECKPOINT` attribute, thus survivors are spawned in a non-safe area and infected may start spawning during the intro (depending on the server infected initial spawning timer settings) and hurt or even kill the survivors. This can be fixed with a new NAV file deploy on the server side which marks the area properly .  
+- Some of the NAV areas in the starting saferoom of map 2, 3 and 4 are not marked with `CHECKPOINT` attribute. Infected may start spawning before survivors open the saferoom door when these areas are stepped in accidentally.  
+- Only the `server` side needs to redeploy the repaired VPK file.  
+
+---
+
 ### Zelda beta (l4d2)  
 `[chi]` 塞尔达测试版  /  `[chi]` 塞尔达传说  
 *zelda.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/5767)] *Updated: 07/16/12*  
- `Stringtable Dictionary Missing`  /  `Malformed Mission File`  /  `Mission Name Confliction`  /  `info_landmark Error`  
+**Known Issues**:  `Stringtable Dictionary Missing`  /  `Malformed Mission File`  /  `Mission Name Confliction`  /  `info_landmark Error`  
 
 - Mission name conflicts with `Power Station`. The `addontitle` in `addoninfo.txt` and `Name` in  mission file needs to be modified. What's even worse is that the mission file name itself also the same as in `Power Station`. If your server plans on hosting both mission, you need to unpack, rename the mission file to something else like `zelda.txt`, fix the content of it and the `addoninfo.txt`, then pack it up again. A redistribution of the repaired VPK file to your client is inevitable. [Here](fixed_mission_files/zelda.txt) is a fix of the mission file, which has been renamed to `zelda.txt`.  
 - The position at the end of the first map links to the second map with an info_landmark entity. However, the info_landmark entity's position is almost 900 units from the ground. So if players successfully made their way to the safe room of the first map, most (if not all) of them will fall and dead at the beginning of the second map. This can be fix with a [Stripper:Source map configuration file](stripper/maps/l4d_zelda02.cfg).  
@@ -873,7 +947,7 @@ Part 2: [[GameMaps](https://www.gamemaps.com/details/21765)] *Updated: 09/14/19*
 *1622008461.vpk*  /  *myl4d2addons zero warning campaign.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/20963)] *Updated: 01/13/19*  
 [[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1622008461)] *Updated: 01/12/19*  
-`Malformed Mission File`  /  `Long Loading Time`  
+**Known Issues**: `Malformed Mission File`  /  `Long Loading Time`  
 
 - When round restarts, there's a significant long pause, which would trigger the dedicated server's watchdog mechanism to raise a SIGALRM signal and restarts the server process. I have to shutdown the watchdog mechanism of the server before I found out what cause the problem and fix it.  
 

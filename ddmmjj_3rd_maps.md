@@ -7,7 +7,7 @@
 `[chi]` 84警区  
 *precinct 84 source.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/19796)] *Updated: 07/03/18*  
-**Known Issue**: `Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 **Maps**: 4  
 
 1. p84m1_apartment  
@@ -21,7 +21,7 @@
 `[chi]` 闹鬼森林  
 *hauntedforest_v3.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2653)] *Updated: 04/23/11*  
-**Known Issue**: `None`  
+**Known Issues**: `None`  
 **Maps**: 4  
 
 1. hf01_theforest  
@@ -35,7 +35,7 @@
 `[chi]` 伦理问题2  
 *qe2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/3589)] *Updated: 10/15/12*  
-**Known Issue**: `Malformed Mission File`  
+**Known Issues**: `Malformed Mission File`  
 **Maps**: 5  
 
 1. qe2_ep1  
@@ -50,7 +50,7 @@
 `[chi]` 死亡系列  
 *deadseries.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2701)] *Updated: 09/09/13*  
-**Known Issue**: `None`  
+**Known Issues**: `None`  
 **Maps**: 4  
 
 1. Dead_Series1  
@@ -64,7 +64,7 @@
 `[chi]` 死亡峡谷  
 *ddg_v2_1.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2135)] *Updated: 12/19/13*  
-**Known Issue**: `None`  
+**Known Issues**: `None`  
 **Maps**: 3  
 
 1. ddg1_tower_v2_1  
@@ -77,7 +77,7 @@
 `[chi]` 17号城市  
 *city17l4d2.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2506)] *Updated: 06/30/10*  
-**Known Issue**: `None`  
+**Known Issues**: `None`  
 **Maps**: 5  
 
 1. l4d2_city17_01  
@@ -92,7 +92,7 @@
 `[chi]` 死路  
 *blight_path_ls.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/2924)] *Updated: 09/11/11*  
-**Known Issue**: `Malformed Mission File` /  `PLAYER_START without CHECKPOINT`  /  `Survivor Spawn Position Issue`  /  `ED_Alloc`  
+**Known Issues**: `Malformed Mission File` /  `PLAYER_START without CHECKPOINT`  /  `Survivor Spawn Position Issue`  /  `ED_Alloc`  
 **Maps**: 3  
 
 1. bp_mapalpha1  
@@ -101,11 +101,91 @@
 
 -----
 
+### D0008 Death Strip  
+`[chi]` 死亡地带  
+*DeathStrip.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/3470)] *Updated: 09/19/11*  
+**Known Issues**: `Malformed Mission File`  
+**Maps**: 6  
+
+1. l4d2_draxmap1  
+2. l4d2_draxmap2  
+3. l4d2_draxmap3  
+4. l4d2_draxmap4  
+5. l4d2_draxmap5  
+6. l4d2_draxmap6  
+
+-----
+
+### D0009 Goldeneye 4 Dead  
+`[chi]` 黄金眼：4人死亡  
+*1647874862.vpk*  /  *goldeneye4dead_fixed.vpk*  
+[[~~GameMaps~~](http://www.gamemaps.com/details/16427)] ~~*ABANDONED*~~  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1647874862)] *Updated: 02/08/19*  
+**Known Issues**: `None`  
+**Maps**: 3  
+
+1. damshort170surv  
+2. gemarshy02fac  
+3. gemarshy03aztec  
+
+- This is a widely spread fix version of the [original](https://www.gamemaps.com/details/3198) campaign. The 1st map in original campaign is missing the stringtable dictionary.
+
+-----
+
+### D0010 The Return: The Sequel  
+`[chi]` 回归：续集  /  `[chi]` 逃离路易斯安纳  
+*1454429897.vpk*  /  *thereturn_sequel.vpk*  
+[[~~GameMaps~~](http://www.gamemaps.com/details/15828)] ~~*ABANDONED*~~  
+[[SteamWorkshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1454429897)] *Updated: 07/27/18*  
+**Known Issues**: `PLAYER_START without CHECKPOINT`  /  `NAV Flow Issue`  
+**Maps**: 5  
+
+1. the_return_lvl1  
+2. the_return_lvl2  
+3. the_return_level3  
+4. the_return_level4  
+5. the_return_lvl5  
+
+- The map content and the map names are the same as [[The Return: Escape from Louisianna](https://www.gamemaps.com/details/2898)], but the map description are slightly different. And although the author 'D.R.W' is the same, the uploaders are different. I am not sure of the relation between them (there is also a even older one from the uploader of 'The Return: Escape from Louisanna' which named [[The Return](https://www.gamemaps.com/details/2766)]). But as long as the content are the same, and for the reason that 'Escape from Louisanna' has a `Stringtable Dictionary Missing` problem on map 5, I chose to use the 'The Sequal' version for our server. Thus it is different from the one that is collected by the **OrangesGame**, which is the same with [[The Return: Escape from Louisianna](https://www.gamemaps.com/details/2898)].
+
+-----
+
+### D0011 Run To The Hills  
+`[chi]` 逃往山丘  
+*runtothehills.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2559)] *Updated: 05/02/11*  
+**Known Issues**: `Malformed Mission File`  /  `PLAYER_START without CHECKPOINT`  
+**Maps**: 5  
+
+1. rh_map01  
+2. rh_map02  
+3. rh_map03  
+4. rh_map04  
+5. rh_map05  
+
+-----
+
+### D0012 Firetower Trail  
+`[chi]` 消防瞭望塔  
+*firetowertrail.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2752)] *Updated: 04/06/14*  
+**Known Issues**: `Checkpoint Missing`  
+**Maps**: 5  
+
+1. versus_1  
+2. versus_2  
+3. versus_3  
+4. versus_4  
+5. versus_5  
+
+-----
+
 ### D0013 Yama   
 `[chi]`  摩耶山危机   
 *l4d_yama.vpk*  
 [[SteamWorkshop](https://steamcommunity.com/workshop/filedetails/?id=170392241)] *Updated: 12/30/17*  
-**Known Issues**: `None`  
+**Known Issues**: `PLAYER_START without CHECKPOINT`  / `Checkpoint Missing`  
 **Maps**: 5  
 
 1. l4d_yama_1  
@@ -120,7 +200,20 @@
 	- [[Yama part 3](https://steamcommunity.com/sharedfiles/filedetails/?id=169801737)] *Updated: 09/23/16*  
 	- [[Yama Finale Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=1127584577)] *Updated: 08/22/19*  
 	
-	
+-----
+
+### D0014 Redemption II  
+`[chi]` 救赎 2  
+*redemptionii.vpk*  
+[[GameMaps](https://www.gamemaps.com/details/2849)] *Updated: 01/15/14*  
+**Known Issues**: `None`  
+**Maps**: 5  
+
+1. redemptionII-deadstop  
+2. redemptionII-plantworks  
+3. redemptionII-ceda-pt1  
+4. redemptionii-ceda-pt2  
+5. roundhouse  
 
 -----
 
@@ -128,7 +221,7 @@
 `[chi]`  幽闭恐惧症   
 *claustrophobia.vpk*  
 [[GameMaps](https://www.gamemaps.com/details/3987)] *Updated: 12/04/12*  
-**Known Issues**: `None`  
+**Known Issues**: `Checkpoint Missing`  
 **Maps**: 7  
 
 1. claustrophobia1  
@@ -748,15 +841,6 @@ There are models missing in map 3 and map 4 which cause random crashes on client
 
 ### D7032 Collaboration 2   
 `[chi]` D7032 合作 2   
-
-
-**Known Issues**: `None`  
-**Maps**:  
-
------
-
-### D7033 The Return: The Sequel   
-`[chi]` D7033 回归：续集   
 
 
 **Known Issues**: `None`  
